@@ -1,0 +1,35 @@
+/*
+ ============================================================================
+ Name        : clase.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+
+    int numero;
+    int promedio;
+    int suma;
+    int i;
+
+    for(i=0;i<5;i++)
+    {
+    	printf("Ingrese un numero: \n");
+    	fflush(stdout);
+    	scanf("%d", numero);
+
+
+    }
+
+    promedio = suma / i;
+
+    printf("El promedio es %d", promedio);
+
+	return 0;
+}

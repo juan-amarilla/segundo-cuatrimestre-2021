@@ -1,0 +1,24 @@
+/*
+ ============================================================================
+amarilla juan sebastian 1C
+
+Ejercicio 2-4:
+Ingresar 5 caracteres e informar cuantas letras p (minúsculas)
+se ingresaron.
+
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+
+	char caracter;
+	int contador;
+
+	printf("ingrese un caracter: \n");
+	fflush(stdout);
+
+	return 0;
+}
