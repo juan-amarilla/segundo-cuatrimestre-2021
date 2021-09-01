@@ -16,6 +16,7 @@ se ingresaron.
 
 //fflush(stdin); es para windows
 //setbuf(stdout, NULL); sirve para ver los mensajes en consola de eclipse
+//int suma();
 
 int main(void) {
 
@@ -47,3 +48,21 @@ int main(void) {
 
 	return 0;
 }
+
+/*int suma(int numeroUno, int numeroDos)
+{
+	int total;
+
+	printf("Ingrese el primer numero: \n");
+	fflush(stdin);
+	scanf("%d", &numeroUno);
+
+	printf("Ingrese el segundo numero: \n");
+	fflush(stdin);
+	scanf("%d", &numeroDos);
+
+	total = numeroUno + numeroDos;
+
+	return total;
+
+}*/

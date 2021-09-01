@@ -1,4 +1,7 @@
-21:08:39 **** Incremental Build of configuration Debug for project clase 2-2 ****
+21:19:56 **** Incremental Build of configuration Debug for project clase 4-2 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 2-2.o" "..\\src\\clase 2-2.c" 
-gcc -o "clase 2-2.exe" "src\\clase 2-2.o" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 4-2.o" "..\\src\\clase 4-2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\transformacion.o" "..\\src\\transformacion.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -o "clase 4-2.exe" "src\\clase 4-2.o" "src\\transformacion.o" "src\\validaciones.o" 
+Info: Nothing to build for clase 4-2

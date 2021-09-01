@@ -1,1 +1,7 @@
-Info: Nothing to build for clase 2-4
+10:49:59 **** Incremental Build of configuration Debug for project clase 2-4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 2-4.o" "..\\src\\clase 2-4.c" 
+gcc -o "clase 2-4.exe" "src\\clase 2-4.o" 
+
+10:49:59 Build Finished. 0 errors, 0 warnings. (took 819ms)
+
