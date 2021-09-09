@@ -1,7 +1,211 @@
-21:19:56 **** Incremental Build of configuration Debug for project clase 4-2 ****
+Info: Nothing to build for clase 5-2
+Info: Nothing to build for clase 5-2
+22:19:29 **** Incremental Build of configuration Debug for project clase 5-2 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 4-2.o" "..\\src\\clase 4-2.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\transformacion.o" "..\\src\\transformacion.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
-gcc -o "clase 4-2.exe" "src\\clase 4-2.o" "src\\transformacion.o" "src\\validaciones.o" 
-Info: Nothing to build for clase 4-2
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
+..\src\funcionesDeNumeros.c: In function 'cantidadDePositivos':
+..\src\funcionesDeNumeros.c:31:16: error: too many arguments to function 'validacionesSignos'
+   validacion = validacionesSignos(numeros, i);
+                ^~~~~~~~~~~~~~~~~~
+In file included from ..\src\funcionesDeNumeros.c:3:0:
+..\src\funcionesDeNumeros.h:76:5: note: declared here
+ int validacionesSignos(int numeros[]);
+     ^~~~~~~~~~~~~~~~~~
+..\src\funcionesDeNumeros.c: In function 'cantidadDeNegativos':
+..\src\funcionesDeNumeros.c:50:16: error: too many arguments to function 'validacionesSignos'
+   validacion = validacionesSignos(numeros, i);
+                ^~~~~~~~~~~~~~~~~~
+In file included from ..\src\funcionesDeNumeros.c:3:0:
+..\src\funcionesDeNumeros.h:76:5: note: declared here
+ int validacionesSignos(int numeros[]);
+     ^~~~~~~~~~~~~~~~~~
+..\src\funcionesDeNumeros.c: In function 'sumatoriaDePares':
+..\src\funcionesDeNumeros.c:73:18: error: too many arguments to function 'verificacionesPar'
+   verificacion = verificacionesPar(numeros, i);
+                  ^~~~~~~~~~~~~~~~~
+In file included from ..\src\funcionesDeNumeros.c:3:0:
+..\src\funcionesDeNumeros.h:83:5: note: declared here
+ int verificacionesPar(int numeros[]);
+     ^~~~~~~~~~~~~~~~~
+..\src\funcionesDeNumeros.c: In function 'mayorImpar':
+..\src\funcionesDeNumeros.c:96:20: error: too many arguments to function 'verificacionesPar'
+     verificacion = verificacionesPar(numeros, i);
+                    ^~~~~~~~~~~~~~~~~
+In file included from ..\src\funcionesDeNumeros.c:3:0:
+..\src\funcionesDeNumeros.h:83:5: note: declared here
+ int verificacionesPar(int numeros[]);
+     ^~~~~~~~~~~~~~~~~
+22:19:57 **** Incremental Build of configuration Debug for project clase 5-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
+..\src\funcionesDeNumeros.c: In function 'validacionesSignos':
+..\src\funcionesDeNumeros.c:156:12: warning: 'i' is used uninitialized in this function [-Wuninitialized]
+  if(numeros[i] > 0)
+            ^
+..\src\funcionesDeNumeros.c: In function 'verificacionesPar':
+..\src\funcionesDeNumeros.c:179:12: warning: 'i' is used uninitialized in this function [-Wuninitialized]
+  if(numeros[i] % 2 == 0)
+            ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 5-2.o" "..\\src\\clase 5-2.c" 
+gcc -o "clase 5-2.exe" "src\\clase 5-2.o" "src\\funcionesDeNumeros.o" 
+22:27:40 **** Incremental Build of configuration Debug for project clase 5-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 5-2.o" "..\\src\\clase 5-2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
+gcc -o "clase 5-2.exe" "src\\clase 5-2.o" "src\\funcionesDeNumeros.o" 
+Info: Nothing to build for clase 5-2
+Info: Nothing to build for clase 5-2
+Info: Nothing to build for clase 5-2
+22:51:35 **** Incremental Build of configuration Debug for project clase 5-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
+..\src\funcionesDeNumeros.c: In function 'cantidadDePositivos':
+..\src\funcionesDeNumeros.c:31:16: error: too few arguments to function 'validacionesSignos'
+   validacion = validacionesSignos(numeros);
+                ^~~~~~~~~~~~~~~~~~
+In file included from ..\src\funcionesDeNumeros.c:3:0:
+..\src\funcionesDeNumeros.h:77:5: note: declared here
+ int validacionesSignos(int numeros[], int i);
+     ^~~~~~~~~~~~~~~~~~
+..\src\funcionesDeNumeros.c: In function 'cantidadDeNegativos':
+..\src\funcionesDeNumeros.c:50:16: error: too few arguments to function 'validacionesSignos'
+   validacion = validacionesSignos(numeros);
+                ^~~~~~~~~~~~~~~~~~
+In file included from ..\src\funcionesDeNumeros.c:3:0:
+..\src\funcionesDeNumeros.h:77:5: note: declared here
+ int validacionesSignos(int numeros[], int i);
+     ^~~~~~~~~~~~~~~~~~
+..\src\funcionesDeNumeros.c: At top level:
+..\src\funcionesDeNumeros.c:151:5: error: conflicting types for 'validacionesSignos'
+ int validacionesSignos(int numero)
+     ^~~~~~~~~~~~~~~~~~
+In file included from ..\src\funcionesDeNumeros.c:3:0:
+..\src\funcionesDeNumeros.h:77:5: note: previous declaration of 'validacionesSignos' was here
+ int validacionesSignos(int numeros[], int i);
+     ^~~~~~~~~~~~~~~~~~
+22:52:09 **** Incremental Build of configuration Debug for project clase 5-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 5-2.o" "..\\src\\clase 5-2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
+..\src\funcionesDeNumeros.c: In function 'cantidadDePositivos':
+..\src\funcionesDeNumeros.c:31:35: warning: passing argument 1 of 'validacionesSignos' makes integer from pointer without a cast [-Wint-conversion]
+   validacion = validacionesSignos(numeros);
+                                   ^~~~~~~
+In file included from ..\src\funcionesDeNumeros.c:3:0:
+..\src\funcionesDeNumeros.h:77:5: note: expected 'int' but argument is of type 'int *'
+ int validacionesSignos(int numeros);
+     ^~~~~~~~~~~~~~~~~~
+..\src\funcionesDeNumeros.c: In function 'cantidadDeNegativos':
+..\src\funcionesDeNumeros.c:50:35: warning: passing argument 1 of 'validacionesSignos' makes integer from pointer without a cast [-Wint-conversion]
+   validacion = validacionesSignos(numeros);
+                                   ^~~~~~~
+In file included from ..\src\funcionesDeNumeros.c:3:0:
+..\src\funcionesDeNumeros.h:77:5: note: expected 'int' but argument is of type 'int *'
+ int validacionesSignos(int numeros);
+     ^~~~~~~~~~~~~~~~~~
+gcc -o "clase 5-2.exe" "src\\clase 5-2.o" "src\\funcionesDeNumeros.o" 
+22:53:45 **** Incremental Build of configuration Debug for project clase 5-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
+..\src\funcionesDeNumeros.c: In function 'cantidadDePositivos':
+..\src\funcionesDeNumeros.c:33:35: warning: passing argument 1 of 'validacionesSignos' makes integer from pointer without a cast [-Wint-conversion]
+   validacion = validacionesSignos(numeros);
+                                   ^~~~~~~
+In file included from ..\src\funcionesDeNumeros.c:3:0:
+..\src\funcionesDeNumeros.h:77:5: note: expected 'int' but argument is of type 'int *'
+ int validacionesSignos(int numeros);
+     ^~~~~~~~~~~~~~~~~~
+..\src\funcionesDeNumeros.c:28:6: warning: variable 'numero' set but not used [-Wunused-but-set-variable]
+  int numero;
+      ^~~~~~
+..\src\funcionesDeNumeros.c: In function 'cantidadDeNegativos':
+..\src\funcionesDeNumeros.c:52:35: warning: passing argument 1 of 'validacionesSignos' makes integer from pointer without a cast [-Wint-conversion]
+   validacion = validacionesSignos(numeros);
+                                   ^~~~~~~
+In file included from ..\src\funcionesDeNumeros.c:3:0:
+..\src\funcionesDeNumeros.h:77:5: note: expected 'int' but argument is of type 'int *'
+ int validacionesSignos(int numeros);
+     ^~~~~~~~~~~~~~~~~~
+gcc -o "clase 5-2.exe" "src\\clase 5-2.o" "src\\funcionesDeNumeros.o" 
+22:53:54 **** Incremental Build of configuration Debug for project clase 5-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
+..\src\funcionesDeNumeros.c: In function 'cantidadDeNegativos':
+..\src\funcionesDeNumeros.c:52:35: warning: passing argument 1 of 'validacionesSignos' makes integer from pointer without a cast [-Wint-conversion]
+   validacion = validacionesSignos(numeros);
+                                   ^~~~~~~
+In file included from ..\src\funcionesDeNumeros.c:3:0:
+..\src\funcionesDeNumeros.h:77:5: note: expected 'int' but argument is of type 'int *'
+ int validacionesSignos(int numeros);
+     ^~~~~~~~~~~~~~~~~~
+gcc -o "clase 5-2.exe" "src\\clase 5-2.o" "src\\funcionesDeNumeros.o" 
+22:54:28 **** Incremental Build of configuration Debug for project clase 5-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
+gcc -o "clase 5-2.exe" "src\\clase 5-2.o" "src\\funcionesDeNumeros.o" 
+Info: Nothing to build for clase 5-2
+22:56:15 **** Incremental Build of configuration Debug for project clase 5-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 5-2.o" "..\\src\\clase 5-2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
+..\src\funcionesDeNumeros.c: In function 'cantidadDeNegativos':
+..\src\funcionesDeNumeros.c:49:6: warning: unused variable 'numero' [-Wunused-variable]
+  int numero;
+      ^~~~~~
+gcc -o "clase 5-2.exe" "src\\clase 5-2.o" "src\\funcionesDeNumeros.o" 
+22:56:25 **** Incremental Build of configuration Debug for project clase 5-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
+gcc -o "clase 5-2.exe" "src\\clase 5-2.o" "src\\funcionesDeNumeros.o" 
+23:00:12 **** Incremental Build of configuration Debug for project clase 5-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
+..\src\funcionesDeNumeros.c: In function 'sumatoriaDePares':
+..\src\funcionesDeNumeros.c:73:36: warning: passing argument 1 of 'verificacionesPar' makes pointer from integer without a cast [-Wint-conversion]
+   verificacion = verificacionesPar(numeros[i]);
+                                    ^~~~~~~
+In file included from ..\src\funcionesDeNumeros.c:3:0:
+..\src\funcionesDeNumeros.h:85:5: note: expected 'int *' but argument is of type 'int'
+ int verificacionesPar(int numeros[], int i);
+     ^~~~~~~~~~~~~~~~~
+..\src\funcionesDeNumeros.c:73:18: error: too few arguments to function 'verificacionesPar'
+   verificacion = verificacionesPar(numeros[i]);
+                  ^~~~~~~~~~~~~~~~~
+In file included from ..\src\funcionesDeNumeros.c:3:0:
+..\src\funcionesDeNumeros.h:85:5: note: declared here
+ int verificacionesPar(int numeros[], int i);
+     ^~~~~~~~~~~~~~~~~
+..\src\funcionesDeNumeros.c: In function 'mayorImpar':
+..\src\funcionesDeNumeros.c:96:38: warning: passing argument 1 of 'verificacionesPar' makes pointer from integer without a cast [-Wint-conversion]
+     verificacion = verificacionesPar(numeros[i]);
+                                      ^~~~~~~
+In file included from ..\src\funcionesDeNumeros.c:3:0:
+..\src\funcionesDeNumeros.h:85:5: note: expected 'int *' but argument is of type 'int'
+ int verificacionesPar(int numeros[], int i);
+     ^~~~~~~~~~~~~~~~~
+..\src\funcionesDeNumeros.c:96:20: error: too few arguments to function 'verificacionesPar'
+     verificacion = verificacionesPar(numeros[i]);
+                    ^~~~~~~~~~~~~~~~~
+In file included from ..\src\funcionesDeNumeros.c:3:0:
+..\src\funcionesDeNumeros.h:85:5: note: declared here
+ int verificacionesPar(int numeros[], int i);
+     ^~~~~~~~~~~~~~~~~
+..\src\funcionesDeNumeros.c: At top level:
+..\src\funcionesDeNumeros.c:173:5: error: conflicting types for 'verificacionesPar'
+ int verificacionesPar(int numero)
+     ^~~~~~~~~~~~~~~~~
+In file included from ..\src\funcionesDeNumeros.c:3:0:
+..\src\funcionesDeNumeros.h:85:5: note: previous declaration of 'verificacionesPar' was here
+ int verificacionesPar(int numeros[], int i);
+     ^~~~~~~~~~~~~~~~~
+23:00:21 **** Incremental Build of configuration Debug for project clase 5-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 5-2.o" "..\\src\\clase 5-2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
+gcc -o "clase 5-2.exe" "src\\clase 5-2.o" "src\\funcionesDeNumeros.o" 
+23:00:56 **** Incremental Build of configuration Debug for project clase 5-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 5-2.o" "..\\src\\clase 5-2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
+gcc -o "clase 5-2.exe" "src\\clase 5-2.o" "src\\funcionesDeNumeros.o" 
+Info: Nothing to build for clase 5-2
