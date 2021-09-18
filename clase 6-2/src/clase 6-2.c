@@ -25,6 +25,7 @@ int main(void)
 
 	setbuf(stdout, NULL);
 
+	inicializarIndice(numeros, T);
 	ingresarNumeros(numeros, T);
 	ordenamiento(numeros, T);
 	listarCrecientePositivo(numeros, T);

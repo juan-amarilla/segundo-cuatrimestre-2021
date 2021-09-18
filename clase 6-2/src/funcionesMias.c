@@ -2,7 +2,8 @@
 
 #include "funcionesMias.h"
 
-void ingresarNumeros(int numeros[], int T) {
+void ingresarNumeros(int numeros[], int T)
+{
 	int i;
 
 	for (i = 0; i < T; i++) {
@@ -13,15 +14,28 @@ void ingresarNumeros(int numeros[], int T) {
 
 }
 
-void ordenamiento(int numeros[], int T) {
+void inicializarIndice(int numeros[], int T)
+{
+	int i;
+
+	for(i=0;i<T;i++)
+	{
+       numeros[i] = 0;
+
+	}
+
+}
+
+void ordenamiento(int numeros[], int T)
+{
 	int i;
 	int j;
 	int auxiliar;
 
-	for (i = 0; i < 10 - 1; i++)
+	for (i = 0; i < T - 1; i++)
 	{
 
-		for (j = i + 1; j < 10; j++)
+		for (j = i + 1; j < T; j++)
 		{
             if (numeros[i] > 0)
 			{
@@ -52,11 +66,14 @@ void listarCrecientePositivo(int numeros[], int T)
 {
 	int i;
 
-    for (i=0;i<10;i++)
+	printf("Listado de numeros positivos: \n");
+
+    for (i=0;i<T;i++)
 	{
+
 		if(numeros[i]>0)
 	    {
-			   printf("el numero positivo es %d\n", numeros[i]);
+		  printf("El numero positivo es %d\n", numeros[i]);
 
 	    }
 
@@ -68,11 +85,13 @@ void listarDecrecienteNegativo(int numeros[], int T)
 {
 	int i;
 
-	for (i=0;i<10;i++)
+	printf("Listado de numeros negativos: \n");
+
+	for (i=0;i<T;i++)
     {
 		if(numeros[i]<0)
 		{
-				   printf("el numero negativo es %d\n", numeros[i]);
+		   printf("El numero negativo es %d\n", numeros[i]);
 
 		}
 

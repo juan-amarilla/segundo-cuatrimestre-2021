@@ -1,211 +1,393 @@
-Info: Nothing to build for clase 5-2
-Info: Nothing to build for clase 5-2
-22:19:29 **** Incremental Build of configuration Debug for project clase 5-2 ****
+Info: Nothing to build for practica-validaciones
+Info: Nothing to build for practica-validaciones
+10:18:50 **** Incremental Build of configuration Debug for project practica-validaciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
-..\src\funcionesDeNumeros.c: In function 'cantidadDePositivos':
-..\src\funcionesDeNumeros.c:31:16: error: too many arguments to function 'validacionesSignos'
-   validacion = validacionesSignos(numeros, i);
-                ^~~~~~~~~~~~~~~~~~
-In file included from ..\src\funcionesDeNumeros.c:3:0:
-..\src\funcionesDeNumeros.h:76:5: note: declared here
- int validacionesSignos(int numeros[]);
-     ^~~~~~~~~~~~~~~~~~
-..\src\funcionesDeNumeros.c: In function 'cantidadDeNegativos':
-..\src\funcionesDeNumeros.c:50:16: error: too many arguments to function 'validacionesSignos'
-   validacion = validacionesSignos(numeros, i);
-                ^~~~~~~~~~~~~~~~~~
-In file included from ..\src\funcionesDeNumeros.c:3:0:
-..\src\funcionesDeNumeros.h:76:5: note: declared here
- int validacionesSignos(int numeros[]);
-     ^~~~~~~~~~~~~~~~~~
-..\src\funcionesDeNumeros.c: In function 'sumatoriaDePares':
-..\src\funcionesDeNumeros.c:73:18: error: too many arguments to function 'verificacionesPar'
-   verificacion = verificacionesPar(numeros, i);
-                  ^~~~~~~~~~~~~~~~~
-In file included from ..\src\funcionesDeNumeros.c:3:0:
-..\src\funcionesDeNumeros.h:83:5: note: declared here
- int verificacionesPar(int numeros[]);
-     ^~~~~~~~~~~~~~~~~
-..\src\funcionesDeNumeros.c: In function 'mayorImpar':
-..\src\funcionesDeNumeros.c:96:20: error: too many arguments to function 'verificacionesPar'
-     verificacion = verificacionesPar(numeros, i);
-                    ^~~~~~~~~~~~~~~~~
-In file included from ..\src\funcionesDeNumeros.c:3:0:
-..\src\funcionesDeNumeros.h:83:5: note: declared here
- int verificacionesPar(int numeros[]);
-     ^~~~~~~~~~~~~~~~~
-22:19:57 **** Incremental Build of configuration Debug for project clase 5-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" 
+10:19:04 **** Incremental Build of configuration Debug for project practica-validaciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
-..\src\funcionesDeNumeros.c: In function 'validacionesSignos':
-..\src\funcionesDeNumeros.c:156:12: warning: 'i' is used uninitialized in this function [-Wuninitialized]
-  if(numeros[i] > 0)
-            ^
-..\src\funcionesDeNumeros.c: In function 'verificacionesPar':
-..\src\funcionesDeNumeros.c:179:12: warning: 'i' is used uninitialized in this function [-Wuninitialized]
-  if(numeros[i] % 2 == 0)
-            ^
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 5-2.o" "..\\src\\clase 5-2.c" 
-gcc -o "clase 5-2.exe" "src\\clase 5-2.o" "src\\funcionesDeNumeros.o" 
-22:27:40 **** Incremental Build of configuration Debug for project clase 5-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" 
+10:19:28 **** Incremental Build of configuration Debug for project practica-validaciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 5-2.o" "..\\src\\clase 5-2.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
-gcc -o "clase 5-2.exe" "src\\clase 5-2.o" "src\\funcionesDeNumeros.o" 
-Info: Nothing to build for clase 5-2
-Info: Nothing to build for clase 5-2
-Info: Nothing to build for clase 5-2
-22:51:35 **** Incremental Build of configuration Debug for project clase 5-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" 
+10:20:53 **** Incremental Build of configuration Debug for project practica-validaciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
-..\src\funcionesDeNumeros.c: In function 'cantidadDePositivos':
-..\src\funcionesDeNumeros.c:31:16: error: too few arguments to function 'validacionesSignos'
-   validacion = validacionesSignos(numeros);
-                ^~~~~~~~~~~~~~~~~~
-In file included from ..\src\funcionesDeNumeros.c:3:0:
-..\src\funcionesDeNumeros.h:77:5: note: declared here
- int validacionesSignos(int numeros[], int i);
-     ^~~~~~~~~~~~~~~~~~
-..\src\funcionesDeNumeros.c: In function 'cantidadDeNegativos':
-..\src\funcionesDeNumeros.c:50:16: error: too few arguments to function 'validacionesSignos'
-   validacion = validacionesSignos(numeros);
-                ^~~~~~~~~~~~~~~~~~
-In file included from ..\src\funcionesDeNumeros.c:3:0:
-..\src\funcionesDeNumeros.h:77:5: note: declared here
- int validacionesSignos(int numeros[], int i);
-     ^~~~~~~~~~~~~~~~~~
-..\src\funcionesDeNumeros.c: At top level:
-..\src\funcionesDeNumeros.c:151:5: error: conflicting types for 'validacionesSignos'
- int validacionesSignos(int numero)
-     ^~~~~~~~~~~~~~~~~~
-In file included from ..\src\funcionesDeNumeros.c:3:0:
-..\src\funcionesDeNumeros.h:77:5: note: previous declaration of 'validacionesSignos' was here
- int validacionesSignos(int numeros[], int i);
-     ^~~~~~~~~~~~~~~~~~
-22:52:09 **** Incremental Build of configuration Debug for project clase 5-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:21:11 **** Incremental Build of configuration Debug for project practica-validaciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 5-2.o" "..\\src\\clase 5-2.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
-..\src\funcionesDeNumeros.c: In function 'cantidadDePositivos':
-..\src\funcionesDeNumeros.c:31:35: warning: passing argument 1 of 'validacionesSignos' makes integer from pointer without a cast [-Wint-conversion]
-   validacion = validacionesSignos(numeros);
-                                   ^~~~~~~
-In file included from ..\src\funcionesDeNumeros.c:3:0:
-..\src\funcionesDeNumeros.h:77:5: note: expected 'int' but argument is of type 'int *'
- int validacionesSignos(int numeros);
-     ^~~~~~~~~~~~~~~~~~
-..\src\funcionesDeNumeros.c: In function 'cantidadDeNegativos':
-..\src\funcionesDeNumeros.c:50:35: warning: passing argument 1 of 'validacionesSignos' makes integer from pointer without a cast [-Wint-conversion]
-   validacion = validacionesSignos(numeros);
-                                   ^~~~~~~
-In file included from ..\src\funcionesDeNumeros.c:3:0:
-..\src\funcionesDeNumeros.h:77:5: note: expected 'int' but argument is of type 'int *'
- int validacionesSignos(int numeros);
-     ^~~~~~~~~~~~~~~~~~
-gcc -o "clase 5-2.exe" "src\\clase 5-2.o" "src\\funcionesDeNumeros.o" 
-22:53:45 **** Incremental Build of configuration Debug for project clase 5-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:22:30 **** Incremental Build of configuration Debug for project practica-validaciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
-..\src\funcionesDeNumeros.c: In function 'cantidadDePositivos':
-..\src\funcionesDeNumeros.c:33:35: warning: passing argument 1 of 'validacionesSignos' makes integer from pointer without a cast [-Wint-conversion]
-   validacion = validacionesSignos(numeros);
-                                   ^~~~~~~
-In file included from ..\src\funcionesDeNumeros.c:3:0:
-..\src\funcionesDeNumeros.h:77:5: note: expected 'int' but argument is of type 'int *'
- int validacionesSignos(int numeros);
-     ^~~~~~~~~~~~~~~~~~
-..\src\funcionesDeNumeros.c:28:6: warning: variable 'numero' set but not used [-Wunused-but-set-variable]
-  int numero;
-      ^~~~~~
-..\src\funcionesDeNumeros.c: In function 'cantidadDeNegativos':
-..\src\funcionesDeNumeros.c:52:35: warning: passing argument 1 of 'validacionesSignos' makes integer from pointer without a cast [-Wint-conversion]
-   validacion = validacionesSignos(numeros);
-                                   ^~~~~~~
-In file included from ..\src\funcionesDeNumeros.c:3:0:
-..\src\funcionesDeNumeros.h:77:5: note: expected 'int' but argument is of type 'int *'
- int validacionesSignos(int numeros);
-     ^~~~~~~~~~~~~~~~~~
-gcc -o "clase 5-2.exe" "src\\clase 5-2.o" "src\\funcionesDeNumeros.o" 
-22:53:54 **** Incremental Build of configuration Debug for project clase 5-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+..\src\validaciones.c: In function 'validarLetras':
+..\src\validaciones.c:14:9: warning: return makes integer from pointer without a cast [-Wint-conversion]
+  return letras;
+         ^~~~~~
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:23:28 **** Incremental Build of configuration Debug for project practica-validaciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
-..\src\funcionesDeNumeros.c: In function 'cantidadDeNegativos':
-..\src\funcionesDeNumeros.c:52:35: warning: passing argument 1 of 'validacionesSignos' makes integer from pointer without a cast [-Wint-conversion]
-   validacion = validacionesSignos(numeros);
-                                   ^~~~~~~
-In file included from ..\src\funcionesDeNumeros.c:3:0:
-..\src\funcionesDeNumeros.h:77:5: note: expected 'int' but argument is of type 'int *'
- int validacionesSignos(int numeros);
-     ^~~~~~~~~~~~~~~~~~
-gcc -o "clase 5-2.exe" "src\\clase 5-2.o" "src\\funcionesDeNumeros.o" 
-22:54:28 **** Incremental Build of configuration Debug for project clase 5-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:24:07 **** Incremental Build of configuration Debug for project practica-validaciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
-gcc -o "clase 5-2.exe" "src\\clase 5-2.o" "src\\funcionesDeNumeros.o" 
-Info: Nothing to build for clase 5-2
-22:56:15 **** Incremental Build of configuration Debug for project clase 5-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:29:35 **** Incremental Build of configuration Debug for project practica-validaciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 5-2.o" "..\\src\\clase 5-2.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
-..\src\funcionesDeNumeros.c: In function 'cantidadDeNegativos':
-..\src\funcionesDeNumeros.c:49:6: warning: unused variable 'numero' [-Wunused-variable]
-  int numero;
-      ^~~~~~
-gcc -o "clase 5-2.exe" "src\\clase 5-2.o" "src\\funcionesDeNumeros.o" 
-22:56:25 **** Incremental Build of configuration Debug for project clase 5-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+..\src\validaciones.c: In function 'validarNumeroEntero':
+..\src\validaciones.c:15:4: error: 'validar' undeclared (first use in this function)
+    validar=0;
+    ^~~~~~~
+..\src\validaciones.c:15:4: note: each undeclared identifier is reported only once for each function it appears in
+..\src\validaciones.c:25:3: error: 'entero' undeclared (first use in this function)
+   entero=atoi(numero);
+   ^~~~~~
+..\src\validaciones.c:25:10: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+   entero=atoi(numero);
+          ^~~~
+10:29:45 **** Incremental Build of configuration Debug for project practica-validaciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
-gcc -o "clase 5-2.exe" "src\\clase 5-2.o" "src\\funcionesDeNumeros.o" 
-23:00:12 **** Incremental Build of configuration Debug for project clase 5-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+..\src\validaciones.c: In function 'validarNumeroEntero':
+..\src\validaciones.c:15:4: error: 'validar' undeclared (first use in this function)
+    validar=0;
+    ^~~~~~~
+..\src\validaciones.c:15:4: note: each undeclared identifier is reported only once for each function it appears in
+..\src\validaciones.c:25:3: error: 'entero' undeclared (first use in this function)
+   entero=atoi(numero);
+   ^~~~~~
+10:31:14 **** Incremental Build of configuration Debug for project practica-validaciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
-..\src\funcionesDeNumeros.c: In function 'sumatoriaDePares':
-..\src\funcionesDeNumeros.c:73:36: warning: passing argument 1 of 'verificacionesPar' makes pointer from integer without a cast [-Wint-conversion]
-   verificacion = verificacionesPar(numeros[i]);
-                                    ^~~~~~~
-In file included from ..\src\funcionesDeNumeros.c:3:0:
-..\src\funcionesDeNumeros.h:85:5: note: expected 'int *' but argument is of type 'int'
- int verificacionesPar(int numeros[], int i);
-     ^~~~~~~~~~~~~~~~~
-..\src\funcionesDeNumeros.c:73:18: error: too few arguments to function 'verificacionesPar'
-   verificacion = verificacionesPar(numeros[i]);
-                  ^~~~~~~~~~~~~~~~~
-In file included from ..\src\funcionesDeNumeros.c:3:0:
-..\src\funcionesDeNumeros.h:85:5: note: declared here
- int verificacionesPar(int numeros[], int i);
-     ^~~~~~~~~~~~~~~~~
-..\src\funcionesDeNumeros.c: In function 'mayorImpar':
-..\src\funcionesDeNumeros.c:96:38: warning: passing argument 1 of 'verificacionesPar' makes pointer from integer without a cast [-Wint-conversion]
-     verificacion = verificacionesPar(numeros[i]);
-                                      ^~~~~~~
-In file included from ..\src\funcionesDeNumeros.c:3:0:
-..\src\funcionesDeNumeros.h:85:5: note: expected 'int *' but argument is of type 'int'
- int verificacionesPar(int numeros[], int i);
-     ^~~~~~~~~~~~~~~~~
-..\src\funcionesDeNumeros.c:96:20: error: too few arguments to function 'verificacionesPar'
-     verificacion = verificacionesPar(numeros[i]);
-                    ^~~~~~~~~~~~~~~~~
-In file included from ..\src\funcionesDeNumeros.c:3:0:
-..\src\funcionesDeNumeros.h:85:5: note: declared here
- int verificacionesPar(int numeros[], int i);
-     ^~~~~~~~~~~~~~~~~
-..\src\funcionesDeNumeros.c: At top level:
-..\src\funcionesDeNumeros.c:173:5: error: conflicting types for 'verificacionesPar'
- int verificacionesPar(int numero)
-     ^~~~~~~~~~~~~~~~~
-In file included from ..\src\funcionesDeNumeros.c:3:0:
-..\src\funcionesDeNumeros.h:85:5: note: previous declaration of 'verificacionesPar' was here
- int verificacionesPar(int numeros[], int i);
-     ^~~~~~~~~~~~~~~~~
-23:00:21 **** Incremental Build of configuration Debug for project clase 5-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+..\src\validaciones.c: In function 'validarNumeroEntero':
+..\src\validaciones.c:29:3: error: invalid type argument of unary '*' (have 'int')
+   *numeroEntero=entero;
+   ^~~~~~~~~~~~~
+10:31:26 **** Incremental Build of configuration Debug for project practica-validaciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 5-2.o" "..\\src\\clase 5-2.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
-gcc -o "clase 5-2.exe" "src\\clase 5-2.o" "src\\funcionesDeNumeros.o" 
-23:00:56 **** Incremental Build of configuration Debug for project clase 5-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+..\src\validaciones.c:5:5: error: conflicting types for 'validarNumeroEntero'
+ int validarNumeroEntero(int* numeroEntero, char numero[])
+     ^~~~~~~~~~~~~~~~~~~
+In file included from ..\src\validaciones.c:3:0:
+..\src\validaciones.h:8:5: note: previous declaration of 'validarNumeroEntero' was here
+ int validarNumeroEntero(int numeroEntero, char numero[]);
+     ^~~~~~~~~~~~~~~~~~~
+..\src\validaciones.c: In function 'validarNumeroEntero':
+..\src\validaciones.c:34:9: warning: return makes integer from pointer without a cast [-Wint-conversion]
+  return numeroEntero;
+         ^~~~~~~~~~~~
+10:31:39 **** Incremental Build of configuration Debug for project practica-validaciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 5-2.o" "..\\src\\clase 5-2.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesDeNumeros.o" "..\\src\\funcionesDeNumeros.c" 
-gcc -o "clase 5-2.exe" "src\\clase 5-2.o" "src\\funcionesDeNumeros.o" 
-Info: Nothing to build for clase 5-2
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+..\src\validaciones.c:5:5: error: conflicting types for 'validarNumeroEntero'
+ int validarNumeroEntero(int* numeroEntero, char numero[])
+     ^~~~~~~~~~~~~~~~~~~
+In file included from ..\src\validaciones.c:3:0:
+..\src\validaciones.h:8:5: note: previous declaration of 'validarNumeroEntero' was here
+ int validarNumeroEntero(int numeroEntero, char numero[]);
+     ^~~~~~~~~~~~~~~~~~~
+10:31:51 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:32:18 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+..\src\validaciones.c: In function 'validarNumeroEntero':
+..\src\validaciones.c:34:9: error: 'validar' undeclared (first use in this function)
+  return validar;
+         ^~~~~~~
+..\src\validaciones.c:34:9: note: each undeclared identifier is reported only once for each function it appears in
+..\src\validaciones.c:35:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+10:32:25 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:33:41 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+..\src\validaciones.c: In function 'validarFlotante':
+..\src\validaciones.c:40:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:34:16 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+..\src\validaciones.c: In function 'validarFlotante':
+..\src\validaciones.c:43:7: warning: unused variable 'str' [-Wunused-variable]
+  char str[20];
+       ^~~
+..\src\validaciones.c:42:8: warning: unused variable 'flotante' [-Wunused-variable]
+  float flotante;
+        ^~~~~~~~
+..\src\validaciones.c:41:6: warning: unused variable 'contador' [-Wunused-variable]
+  int contador;
+      ^~~~~~~~
+..\src\validaciones.c:40:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+..\src\validaciones.c:39:6: warning: unused variable 'validacion' [-Wunused-variable]
+  int validacion;
+      ^~~~~~~~~~
+..\src\validaciones.c:45:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:34:39 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+..\src\validaciones.c: In function 'validarFlotante':
+..\src\validaciones.c:42:8: warning: unused variable 'flotante' [-Wunused-variable]
+  float flotante;
+        ^~~~~~~~
+..\src\validaciones.c:41:6: warning: unused variable 'flag' [-Wunused-variable]
+  int flag;
+      ^~~~
+..\src\validaciones.c:40:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+..\src\validaciones.c:39:6: warning: unused variable 'validacion' [-Wunused-variable]
+  int validacion;
+      ^~~~~~~~~~
+..\src\validaciones.c:44:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:35:53 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+..\src\validaciones.c: In function 'validarFlotante':
+..\src\validaciones.c:42:8: warning: unused variable 'flotante' [-Wunused-variable]
+  float flotante;
+        ^~~~~~~~
+..\src\validaciones.c:41:6: warning: variable 'flag' set but not used [-Wunused-but-set-variable]
+  int flag;
+      ^~~~
+..\src\validaciones.c:40:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+  int i;
+      ^
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:37:16 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+..\src\validaciones.c: In function 'validarFlotante':
+..\src\validaciones.c:42:8: warning: unused variable 'flotante' [-Wunused-variable]
+  float flotante;
+        ^~~~~~~~
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:38:01 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:40:08 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:42:28 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+..\src\validaciones.c: In function 'validarLetras':
+..\src\validaciones.c:99:5: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+     strcpy(letras, str);
+     ^~~~~~
+..\src\validaciones.c:99:5: warning: incompatible implicit declaration of built-in function 'strcpy'
+..\src\validaciones.c:99:5: note: include '<string.h>' or provide a declaration of 'strcpy'
+..\src\validaciones.c:99:20: error: 'str' undeclared (first use in this function)
+     strcpy(letras, str);
+                    ^~~
+..\src\validaciones.c:99:20: note: each undeclared identifier is reported only once for each function it appears in
+10:42:52 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+..\src\validaciones.c: In function 'validarLetras':
+..\src\validaciones.c:99:5: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+     strcpy(letras, caracter);
+     ^~~~~~
+..\src\validaciones.c:99:5: warning: incompatible implicit declaration of built-in function 'strcpy'
+..\src\validaciones.c:99:5: note: include '<string.h>' or provide a declaration of 'strcpy'
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:43:18 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:46:38 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:46:45 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+..\src\validaciones.c: In function 'validarNumeroEntero':
+..\src\validaciones.c:28:10: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+   entero=atoi(numero);
+          ^~~~
+..\src\validaciones.c: In function 'validarFlotante':
+..\src\validaciones.c:69:14: warning: implicit declaration of function 'atof' [-Wimplicit-function-declaration]
+     flotante=atof(numero);
+              ^~~~
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:46:51 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:46:57 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:47:58 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+..\src\practica-validaciones.c: In function 'main':
+..\src\practica-validaciones.c:13:9: warning: unused variable 'numero' [-Wunused-variable]
+    char numero[20];
+         ^~~~~~
+..\src\practica-validaciones.c:12:10: warning: unused variable 'flotante' [-Wunused-variable]
+    float flotante;
+          ^~~~~~~~
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:49:00 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+..\src\practica-validaciones.c: In function 'main':
+..\src\practica-validaciones.c:14:8: warning: unused variable 'estado' [-Wunused-variable]
+    int estado;
+        ^~~~~~
+..\src\practica-validaciones.c:13:9: warning: unused variable 'numero' [-Wunused-variable]
+    char numero[20];
+         ^~~~~~
+..\src\practica-validaciones.c:12:10: warning: unused variable 'flotante' [-Wunused-variable]
+    float flotante;
+          ^~~~~~~~
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:49:23 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+..\src\practica-validaciones.c: In function 'main':
+..\src\practica-validaciones.c:16:29: error: incompatible type for argument 1 of 'validarFlotante'
+    estado = validarFlotante(flotante, numero);
+                             ^~~~~~~~
+In file included from ..\src\practica-validaciones.c:8:0:
+..\src\validaciones.h:9:5: note: expected 'float *' but argument is of type 'float'
+ int validarFlotante(float* numeroFlotante, char numero[]);
+     ^~~~~~~~~~~~~~~
+..\src\practica-validaciones.c:14:8: warning: variable 'estado' set but not used [-Wunused-but-set-variable]
+    int estado;
+        ^~~~~~
+10:49:34 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+..\src\practica-validaciones.c: In function 'main':
+..\src\practica-validaciones.c:14:8: warning: variable 'estado' set but not used [-Wunused-but-set-variable]
+    int estado;
+        ^~~~~~
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:49:41 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+..\src\practica-validaciones.c: In function 'main':
+..\src\practica-validaciones.c:16:29: warning: passing argument 1 of 'validarFlotante' from incompatible pointer type [-Wincompatible-pointer-types]
+    estado = validarFlotante(&flotante, numero);
+                             ^
+In file included from ..\src\practica-validaciones.c:8:0:
+..\src\validaciones.h:9:5: note: expected 'float *' but argument is of type 'float **'
+ int validarFlotante(float* numeroFlotante, char numero[]);
+     ^~~~~~~~~~~~~~~
+..\src\practica-validaciones.c:14:8: warning: variable 'estado' set but not used [-Wunused-but-set-variable]
+    int estado;
+        ^~~~~~
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:49:49 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+..\src\practica-validaciones.c: In function 'main':
+..\src\practica-validaciones.c:14:8: warning: variable 'estado' set but not used [-Wunused-but-set-variable]
+    int estado;
+        ^~~~~~
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:51:03 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:51:10 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:51:43 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:52:18 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:52:57 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+10:54:46 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+Info: Nothing to build for practica-validaciones
+Info: Nothing to build for practica-validaciones
+Info: Nothing to build for practica-validaciones
+Info: Nothing to build for practica-validaciones
+Info: Nothing to build for practica-validaciones
+Info: Nothing to build for practica-validaciones
+10:58:08 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+..\src\practica-validaciones.c: In function 'main':
+..\src\practica-validaciones.c:21:6: warning: 'estado' is used uninitialized in this function [-Wuninitialized]
+    if(estado == 1)
+      ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+11:01:09 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+Info: Nothing to build for practica-validaciones
+Info: Nothing to build for practica-validaciones
+Info: Nothing to build for practica-validaciones
+11:02:48 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+Info: Nothing to build for practica-validaciones
+Info: Nothing to build for practica-validaciones
+Info: Nothing to build for practica-validaciones
+Info: Nothing to build for practica-validaciones
+Info: Nothing to build for practica-validaciones
+11:04:49 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 
+11:05:54 **** Incremental Build of configuration Debug for project practica-validaciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\practica-validaciones.o" "..\\src\\practica-validaciones.c" 
+gcc -o practica-validaciones.exe "src\\practica-validaciones.o" "src\\validaciones.o" 

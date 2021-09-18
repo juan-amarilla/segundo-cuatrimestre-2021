@@ -30,11 +30,33 @@ int main(void)
 	char nombre[T_NOMBRE];
 	char apellido[T_APELLIDO];
 	char apellidoNombre[T_COMPLETO];
+	int retornoUno;
+	int retornoDos;
 
 	setbuf(stdout, NULL);
 
-	ingresarDatos("Ingrese nombre: \n", nombre);
-	ingresarDatos("Ingrese apellido: \n", apellido);
+	retornoUno = ingresarDatos("Ingrese nombre: \n", nombre);
+
+	if(retornoUno == 1)
+	{
+		printf("Dato ingresado con exito. \n");
+	}
+	else
+	{
+		printf("Error el dato no fue ingresado. \n");
+	}
+
+	retornoDos = ingresarDatos("Ingrese apellido: \n", apellido);
+
+	if(retornoDos == 1)
+	{
+			printf("Dato ingresado con exito. \n");
+	}
+	else
+	{
+			printf("Error el dato no fue ingresado. \n");
+	}
+
 	mostrarDatos(apellidoNombre, nombre, apellido);
 
 	return 0;

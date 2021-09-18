@@ -11,6 +11,13 @@
 /// @param int T
 void ingresarNumeros(int numeros[], int T);
 
+/// @fn void inicializarIndice(int[], int)
+/// @brief su funcion es inicializar en 0 los numeros
+///
+/// @param int numeros[]
+/// @param int tam
+void inicializarIndice(int numeros[], int T);
+
 /// @fn void ordenamiento(int[], int)
 /// @brief ordenas los numeros de manera creciente y decreciente
 ///

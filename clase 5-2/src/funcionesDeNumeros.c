@@ -152,6 +152,8 @@ int validacionesSignos(int numero)
 {
 	int retorno;
 
+	retorno = -1;
+
 	if(numero > 0)
 	{
 		retorno = 1;
@@ -174,15 +176,11 @@ int verificacionesPar(int numero)
 {
 	int retorno;
 
+	retorno = 0;
+
 	if(numero % 2 == 0)
 	{
 		retorno = 1;
-	}
-
-	else
-	{
-	    retorno = 0;
-
 	}
 
 	return retorno;

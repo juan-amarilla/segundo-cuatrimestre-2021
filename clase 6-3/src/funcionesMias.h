@@ -6,12 +6,13 @@
 #include <stdio.h>
 #include <ctype.h>
 
-/// @fn void ingresarDatos(char[], char[])
-/// @brief ingresas un nombre o apellido
+/// @fn int ingresarDatos(char[], char[])
+/// @brief su funcion es ingresar un nombre o apellido
 ///
 /// @param char mensaje[]
 /// @param char dato[]
-void ingresarDatos(char mensaje[], char dato[]);
+/// @return retorna 1 si salio bien o 0 si salio mal
+int ingresarDatos(char mensaje[], char dato[]);
 
 /// @fn void mostrarDatos(char[], char[], char[])
 /// @brief muestra el apellido y el nombre
