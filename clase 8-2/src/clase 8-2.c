@@ -46,6 +46,7 @@ int main(void)
 	int estado;
 	int opcion;
 	char cadena[CARACTER];
+	char cadenaDos[CARACTER];
 
 	setbuf(stdout, NULL);
 
@@ -75,17 +76,17 @@ int main(void)
 		 break;
 
 		 case 4:
-		 mostrarVariosProductos(listaProducto, TAM);
+		 mostrarVariosProductos(listaProducto, TAM, cadena, cadenaDos);
 		 break;
 
 		 case 5:
 	     ordenarPorPrecio(listaProducto, TAM);
-	     mostrarVariosProductos(listaProducto, TAM);
+	     mostrarVariosProductos(listaProducto, TAM, cadena, cadenaDos);
 		 break;
 
 		 case 6:
 		 ordenarPorDescripcion(listaProducto, TAM);
-		 mostrarVariosProductos(listaProducto, TAM);
+		 mostrarVariosProductos(listaProducto, TAM, cadena, cadenaDos);
 		 break;
 
 		 case 7:

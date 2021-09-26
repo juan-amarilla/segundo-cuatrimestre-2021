@@ -47,18 +47,22 @@ eProducto pedirProducto(eProducto unProducto, char cadena[]);
 /// @return retorna 1 si salio bien o 0 si salio mal
 int altaProducto(eProducto unProducto[], int tam, char cadena[]);
 
-/// @fn void mostrarProducto(eProducto)
+/// @fn void mostrarProducto(eProducto, char[], char[])
 /// @brief su funcion es mostrar un producto
 ///
 /// @param eProducto unProducto
-void mostrarProducto(eProducto unProducto);
+/// @param char nacionalidad[]
+/// @param char tipo[]
+void mostrarProducto(eProducto unProducto, char nacionalidad[], char tipo[]);
 
-/// @fn void mostrarVariosProductos(eProducto[], int)
-/// @brief su funcion es mostrar un listado de productos
+/// @fn void mostrarVariosProductos(eProducto[], int, char[], char[])
+/// @brief su funcion es listar todos los productos
 ///
 /// @param eProducto unProducto[]
 /// @param int tam
-void mostrarVariosProductos(eProducto unProducto[], int tam);
+/// @param char nacionalidad[]
+/// @param char tipo[]
+void mostrarVariosProductos(eProducto unProducto[], int tam, char nacionalidad[], char tipo[]);
 
 /// @fn void inicializarProductos(eProducto[], int)
 /// @brief su funcion es inicializar los estados de los productos en 0
@@ -112,5 +116,12 @@ void verificacionNacionalidad(int opcion, char caracter[]);
 /// @param int opcion
 /// @param char caracter[]
 void verificacionTipo(int opcion, char caracter[]);
+
+/// @fn int buscarEstado(int)
+/// @brief su funcion es verificar si esta ocupado o vacio un estado de un producto
+///
+/// @param int estado
+/// @return retorna 1 si esta ocupado o 0 si esta vacio
+int buscarEstado(int estado);
 
 #endif /* PRODUCTO_H_ */

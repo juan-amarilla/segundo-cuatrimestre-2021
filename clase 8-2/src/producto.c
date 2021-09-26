@@ -8,35 +8,47 @@ int modificarProducto(eProducto unProducto[], int tam, char cadena[])
 	int idProducto;
 	int retorno;
 	int opcion;
+	int seguro;
 
 	retorno = 0;
 	idProducto = -1;
 
-	pedirEnteroValidado(cadena, "Ingrese ID de producto para la modificacion: \n", &idProducto);
+	pedirEnteroValidado(cadena, "Estas seguro de modificar el producto? Ingrese el numero 1-Si o 2-No \n", &seguro);
 
-	for(i=0;i<tam;i++)
+	if(seguro == 1)
 	{
-		if(unProducto[i].idProducto == idProducto && unProducto[i].estado != VACIO)
+		pedirEnteroValidado(cadena, "Ingrese ID de producto para la modificacion: \n", &idProducto);
+
+		for(i=0;i<tam;i++)
 		{
-			pedirEnteroValidado(cadena, "-1 Modificar precio -2 Modificar tipo \n", &opcion);
-
-			if(opcion == 1)
+			if(unProducto[i].idProducto == idProducto && buscarEstado(unProducto[i].estado) != VACIO)
 			{
-				pedirFlotanteValidado(cadena, "Ingrese precio: \n", &unProducto[i].precio);
-				retorno = 1;
-				break;
-			}
+				pedirEnteroValidado(cadena, "-1 Modificar precio -2 Modificar tipo \n", &opcion);
 
-			else
-			{
-				if(opcion == 2)
+				if(opcion == 1)
 				{
-					pedirEnteroValidado(cadena, "Ingrese tipo: 1-IPHONE 2-MAC 3-IPAD 4-ACCESORIOS. \n", &unProducto[i].tipo);
+					pedirFlotanteValidado(cadena, "Ingrese precio: \n", &unProducto[i].precio);
 					retorno = 1;
 					break;
 				}
+
+				else
+				{
+					if(opcion == 2)
+					{
+						pedirEnteroValidado(cadena, "Ingrese tipo: 1-IPHONE 2-MAC 3-IPAD 4-ACCESORIOS. \n", &unProducto[i].tipo);
+						retorno = 1;
+						break;
+					}
+				}
 			}
 		}
+
+	}
+
+	else
+	{
+		printf("La modificacion no se logro \n");
 	}
 
 	return retorno;
@@ -58,31 +70,41 @@ int bajaProducto(eProducto unProducto[], int tam, char cadena[])
 	int i;
 	int idProducto;
 	int retorno;
+	int seguro;
 
 	retorno = 0;
 	idProducto = -1;
 
-	pedirEnteroValidado(cadena, "Ingrese ID de producto para la baja: \n", &idProducto);
+	pedirEnteroValidado(cadena, "Estas seguro de dar de baja? Ingrese el numero 1-Si o 2-No \n", &seguro);
 
-	for(i=0;i<tam;i++)
+	if(seguro == 1)
 	{
-		if(unProducto[i].idProducto == idProducto && unProducto[i].estado != VACIO)
+		pedirEnteroValidado(cadena, "Ingrese ID de producto para la baja: \n", &idProducto);
+
+		for(i=0;i<tam;i++)
 		{
-		   unProducto[i].estado = VACIO;
-		   retorno = 1;
-		   break;
+			if(unProducto[i].idProducto == idProducto && buscarEstado(unProducto[i].estado) != VACIO)
+			{
+				 unProducto[i].estado = VACIO;
+				 retorno = 1;
+				 break;
+			}
 		}
+
+	}
+
+	else
+	{
+		printf("No se dio de baja el producto \n");
+
 	}
 
 	return retorno;
 
 }
 
-void mostrarProducto(eProducto unProducto)
+void mostrarProducto(eProducto unProducto, char nacionalidad[], char tipo[])
 {
-
-	char nacionalidad[15];
-	char tipo[15];
 
 	verificacionNacionalidad(unProducto.nacionalidad, nacionalidad);
 	verificacionTipo(unProducto.tipo, tipo);
@@ -95,7 +117,7 @@ void mostrarProducto(eProducto unProducto)
 
 }
 
-void mostrarVariosProductos(eProducto unProducto[], int tam)
+void mostrarVariosProductos(eProducto unProducto[], int tam, char nacionalidad[], char tipo[])
 {
 	int i;
 
@@ -103,9 +125,9 @@ void mostrarVariosProductos(eProducto unProducto[], int tam)
 
 	for(i=0;i<tam;i++)
 	{
-		if(unProducto[i].estado == 1)
+		if(buscarEstado(unProducto[i].estado) == 1)
 		{
-		   mostrarProducto(unProducto[i]);
+		   mostrarProducto(unProducto[i], nacionalidad, tipo);
 		}
 	}
 
@@ -114,21 +136,21 @@ void mostrarVariosProductos(eProducto unProducto[], int tam)
 int altaProducto(eProducto unProducto[], int tam, char cadena[])
 {
 	int i;
-	int estado;
+	int retorno;
 
-	estado = 0;
+	retorno = 0;
 
 	for(i=0;i<tam;i++)
 	{
-		if(unProducto[i].estado != 1)
+		if(buscarEstado(unProducto[i].estado) != 1)
 		{
 			unProducto[i] = pedirProducto(unProducto[i], cadena);
-			estado = 1;
+			retorno = 1;
 			break;
 		}
 	}
 
-	return estado;
+	return retorno;
 }
 
 eProducto pedirProducto(eProducto unProducto, char cadena[])
@@ -233,4 +255,18 @@ void verificacionTipo(int opcion, char caracter[])
 		 break;
 
 	}
+}
+
+int buscarEstado(int estado)
+{
+	int retorno;
+
+	retorno = 0;
+
+	if(estado == OCUPADO)
+	{
+		retorno = 1;
+	}
+
+	return retorno;
 }
