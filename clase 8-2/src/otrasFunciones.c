@@ -127,3 +127,32 @@ int validarLetras(char letras[], char caracter[])
 
 	return validacion;
 }
+
+int validarAlfaNumerico(char letras[], char caracter[])
+{
+	int validacion;
+	int i;
+
+	validacion = 1;
+	i = 0;
+
+	while(caracter[i]!='\0')
+	{
+		  if((isdigit(caracter[i]) != 1) && (isalpha(caracter[i]) == 0) && (isspace(caracter[i]) != 0))
+		  {
+		    	validacion=0;
+		        break;
+		  }
+
+		  i++;
+	}
+
+	if(validacion==1)
+	{
+		strcpy(letras, caracter);
+
+	}
+
+    return validacion;
+
+}

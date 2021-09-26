@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 /// @fn void mensajeEstado(int, char[], char[])
 /// @brief su funcion es mostrar uno de los dos mensajes
@@ -42,5 +43,13 @@ int validarNumeroFlotante(float* numeroFlotante, char numero[]);
 /// @param char caracter[]
 /// @return retorna 1 si salio bien o 0 si salio mal
 int validarLetras(char letras[], char caracter[]);
+
+/// @fn int validarAlfaNumerico(char[], char[])
+/// @brief su funcion es validar si la cadena son solamente letras y numeros
+///
+/// @param char letras[]
+/// @param char caracter[]
+/// @return retorna 1 si salio bien o 0 si salio mal
+int validarAlfaNumerico(char letras[], char caracter[]);
 
 #endif /* OTRASFUNCIONES_H_ */

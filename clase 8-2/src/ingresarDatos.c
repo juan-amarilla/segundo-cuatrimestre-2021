@@ -71,13 +71,13 @@ void pedirCadenaValidado(char cadena[], char mensaje[], char cadenaValidado[])
     fflush(stdin);
     gets(cadena);
 
-    estado = validarLetras(cadenaValidado, cadena);
+    estado = validarAlfaNumerico(cadenaValidado, cadena);
 
     while(estado == 0)
     {
     	printf("Error: %s", mensaje);
     	fflush(stdin);
     	gets(cadena);
-    	estado = validarLetras(cadenaValidado, cadena);
+    	estado = validarAlfaNumerico(cadenaValidado, cadena);
     }
 }
