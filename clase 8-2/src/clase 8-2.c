@@ -81,12 +81,10 @@ int main(void)
 
 		 case 5:
 	     ordenarPorPrecio(listaProducto, TAM);
-	     mostrarVariosProductos(listaProducto, TAM, cadena, cadenaDos);
 		 break;
 
 		 case 6:
 		 ordenarPorDescripcion(listaProducto, TAM);
-		 mostrarVariosProductos(listaProducto, TAM, cadena, cadenaDos);
 		 break;
 
 		 case 7:

@@ -1,78 +1,30 @@
-19:05:25 **** Rebuild of configuration Debug for project clase 8-2 ****
+11:18:17 **** Rebuild of configuration Debug for project clase 10-3 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\producto.o" "..\\src\\producto.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 8-2.o" "..\\src\\clase 8-2.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ingresarDatos.o" "..\\src\\ingresarDatos.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\otrasFunciones.o" "..\\src\\otrasFunciones.c" 
-..\src\otrasFunciones.c: In function 'validarAlfaNumerico':
-..\src\otrasFunciones.c:141:111: warning: implicit declaration of function 'isdigit' [-Wimplicit-function-declaration]
-     if((caracter[i]<'a' || caracter[i]>'z') && (caracter[i]<'A' || caracter[i]>'Z') && (caracter[i]!=' ') && (isdigit(caracte[i) != 1))
-                                                                                                               ^~~~~~~
-..\src\otrasFunciones.c:141:119: error: 'caracte' undeclared (first use in this function)
-     if((caracter[i]<'a' || caracter[i]>'z') && (caracter[i]<'A' || caracter[i]>'Z') && (caracter[i]!=' ') && (isdigit(caracte[i) != 1))
-                                                                                                                       ^~~~~~~
-..\src\otrasFunciones.c:141:119: note: each undeclared identifier is reported only once for each function it appears in
-..\src\otrasFunciones.c:141:128: error: expected ']' before ')' token
-     if((caracter[i]<'a' || caracter[i]>'z') && (caracter[i]<'A' || caracter[i]>'Z') && (caracter[i]!=' ') && (isdigit(caracte[i) != 1))
-                                                                                                                                ^
-19:05:47 **** Incremental Build of configuration Debug for project clase 8-2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\otrasFunciones.o" "..\\src\\otrasFunciones.c" 
-..\src\otrasFunciones.c: In function 'validarAlfaNumerico':
-..\src\otrasFunciones.c:141:111: warning: implicit declaration of function 'isdigit' [-Wimplicit-function-declaration]
-     if((caracter[i]<'a' || caracter[i]>'z') && (caracter[i]<'A' || caracter[i]>'Z') && (caracter[i]!=' ') && (isdigit(caracter[i) != 1))
-                                                                                                               ^~~~~~~
-..\src\otrasFunciones.c:141:129: error: expected ']' before ')' token
-     if((caracter[i]<'a' || caracter[i]>'z') && (caracter[i]<'A' || caracter[i]>'Z') && (caracter[i]!=' ') && (isdigit(caracter[i) != 1))
-                                                                                                                                 ^
-19:06:06 **** Incremental Build of configuration Debug for project clase 8-2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\otrasFunciones.o" "..\\src\\otrasFunciones.c" 
-..\src\otrasFunciones.c: In function 'validarAlfaNumerico':
-..\src\otrasFunciones.c:141:111: warning: implicit declaration of function 'isdigit' [-Wimplicit-function-declaration]
-     if((caracter[i]<'a' || caracter[i]>'z') && (caracter[i]<'A' || caracter[i]>'Z') && (caracter[i]!=' ') && (isdigit(caracter[i] != 1))
-                                                                                                               ^~~~~~~
-..\src\otrasFunciones.c:142:5: error: expected ')' before '{' token
-     {
-     ^
-..\src\otrasFunciones.c:148:2: error: expected expression before '}' token
-  }
-  ^
-19:06:31 **** Incremental Build of configuration Debug for project clase 8-2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 8-2.o" "..\\src\\clase 8-2.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ingresarDatos.o" "..\\src\\ingresarDatos.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\producto.o" "..\\src\\producto.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\otrasFunciones.o" "..\\src\\otrasFunciones.c" 
-..\src\otrasFunciones.c: In function 'validarAlfaNumerico':
-..\src\otrasFunciones.c:142:5: error: expected ')' before '{' token
-     {
-     ^
-..\src\otrasFunciones.c:148:2: error: expected expression before '}' token
-  }
-  ^
-19:07:01 **** Incremental Build of configuration Debug for project clase 8-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 10-3.o" "..\\src\\clase 10-3.c" 
+gcc -o "clase 10-3.exe" "src\\clase 10-3.o" "src\\ingresarDatos.o" "src\\otrasFunciones.o" "src\\producto.o" 
+Info: Nothing to build for clase 10-3
+11:31:53 **** Incremental Build of configuration Debug for project clase 10-3 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\otrasFunciones.o" "..\\src\\otrasFunciones.c" 
-gcc -o "clase 8-2.exe" "src\\clase 8-2.o" "src\\ingresarDatos.o" "src\\otrasFunciones.o" "src\\producto.o" 
-19:07:52 **** Incremental Build of configuration Debug for project clase 8-2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 10-3.o" "..\\src\\clase 10-3.c" 
+gcc -o "clase 10-3.exe" "src\\clase 10-3.o" "src\\ingresarDatos.o" "src\\otrasFunciones.o" "src\\producto.o" 
+Info: Nothing to build for clase 10-3
+11:45:43 **** Incremental Build of configuration Debug for project clase 10-3 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ingresarDatos.o" "..\\src\\ingresarDatos.c" 
-gcc -o "clase 8-2.exe" "src\\clase 8-2.o" "src\\ingresarDatos.o" "src\\otrasFunciones.o" "src\\producto.o" 
-Info: Nothing to build for clase 8-2
-19:09:47 **** Incremental Build of configuration Debug for project clase 8-2 ****
-Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 10-3.o" "..\\src\\clase 10-3.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\etipoProducto.o" "..\\src\\etipoProducto.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\otrasFunciones.o" "..\\src\\otrasFunciones.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ingresarDatos.o" "..\\src\\ingresarDatos.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 8-2.o" "..\\src\\clase 8-2.c" 
+gcc -o "clase 10-3.exe" "src\\clase 10-3.o" "src\\etipoProducto.o" "src\\ingresarDatos.o" "src\\otrasFunciones.o" "src\\producto.o" 
+11:46:10 **** Incremental Build of configuration Debug for project clase 10-3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\etipoProducto.o" "..\\src\\etipoProducto.c" 
+gcc -o "clase 10-3.exe" "src\\clase 10-3.o" "src\\etipoProducto.o" "src\\ingresarDatos.o" "src\\otrasFunciones.o" "src\\producto.o" 
+Info: Nothing to build for clase 10-3
+12:01:12 **** Incremental Build of configuration Debug for project clase 10-3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 10-3.o" "..\\src\\clase 10-3.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\producto.o" "..\\src\\producto.c" 
-gcc -o "clase 8-2.exe" "src\\clase 8-2.o" "src\\ingresarDatos.o" "src\\otrasFunciones.o" "src\\producto.o" 
-19:13:16 **** Incremental Build of configuration Debug for project clase 8-2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\otrasFunciones.o" "..\\src\\otrasFunciones.c" 
-gcc -o "clase 8-2.exe" "src\\clase 8-2.o" "src\\ingresarDatos.o" "src\\otrasFunciones.o" "src\\producto.o" 
-Info: Nothing to build for clase 8-2
-19:14:37 **** Incremental Build of configuration Debug for project clase 8-2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\otrasFunciones.o" "..\\src\\otrasFunciones.c" 
-gcc -o "clase 8-2.exe" "src\\clase 8-2.o" "src\\ingresarDatos.o" "src\\otrasFunciones.o" "src\\producto.o" 
+gcc -o "clase 10-3.exe" "src\\clase 10-3.o" "src\\etipoProducto.o" "src\\ingresarDatos.o" "src\\otrasFunciones.o" "src\\producto.o" 
