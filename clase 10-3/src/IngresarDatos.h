@@ -5,7 +5,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "otrasFunciones.h"
+
+#include "OtrasFunciones.h"
 
 /// @fn int pedirEntero(int, char[])
 /// @brief su funcion es ingresar un entero

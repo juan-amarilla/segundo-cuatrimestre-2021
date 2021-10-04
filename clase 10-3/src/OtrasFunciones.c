@@ -1,6 +1,6 @@
 //amarilla juan sebastian 1C
 
-#include "otrasFunciones.h"
+#include "OtrasFunciones.h"
 
 void mensajeEstado(int estado, char mensaje[], char error[])
 {

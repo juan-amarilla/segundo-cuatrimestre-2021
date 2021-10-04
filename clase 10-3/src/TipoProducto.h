@@ -1,8 +1,8 @@
 //amarilla juan sebastian 1C
 
 
-#ifndef ETIPOPRODUCTO_H_
-#define ETIPOPRODUCTO_H_
+#ifndef TIPOPRODUCTO_H_
+#define TIPOPRODUCTO_H_
 #define TAM_CARACTER 50
 
 typedef struct
@@ -12,4 +12,6 @@ typedef struct
 
 }eTipoProducto;
 
-#endif /* ETIPOPRODUCTO_H_ */
+int verificarTipo(eTipoProducto unTipo[], int tam, int id);
+
+#endif /* TIPOPRODUCTO_H_ */

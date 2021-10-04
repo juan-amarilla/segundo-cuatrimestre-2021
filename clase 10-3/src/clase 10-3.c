@@ -55,23 +55,26 @@ Se agregan los siguientes listados:
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "ingresarDatos.h"
-#include "otrasFunciones.h"
-#include "producto.h"
-#define TAM 5
+
+#include "IngresarDatos.h"
+#include "OtrasFunciones.h"
+#include "Producto.h"
+#define TAM 4
+#define TAM_TIPO 4
 #define CARACTERES 100
-#define CANTIDAD_CADENA 2
 
 int main(void)
 {
 	eProducto listaProducto[TAM];
+	eTipoProducto listaTipo[TAM_TIPO]={ {1000, "Iphone"},
+			                            {1001, "Ipad"},
+			                            {1002, "Mac"},
+			                            {1003, "Accesorios"} };
 	int estado;
 	int opcion;
-	char cadena[CANTIDAD_CADENA][CARACTERES];
+	char cadena[CARACTERES];
 	float precioMayor;
 	float precioMenor;
-	float promedio[4] = {};
-	int contador[4] = {};
 
 	precioMayor=0;
 	precioMenor=0;
@@ -83,83 +86,92 @@ int main(void)
 	do
 	{
 		menu();
-		pedirEnteroValidado(cadena[0], "-Ingrese una opcion valida: \n", &opcion);
+		pedirEnteroValidado(cadena, "-Ingrese una opcion valida: \n", &opcion);
 
 		switch(opcion)
 		{
 
 		 case 1:
-		 estado = altaProducto(listaProducto, TAM, cadena[0]);
+		 estado = altaProducto(listaProducto, TAM, cadena);
 		 mensajeEstado(estado, "Producto ingresado con exito. \n", "Producto ingresado sin exito. \n");
 		 break;
 
 		 case 2:
-		 estado = bajaProducto(listaProducto, TAM, cadena[0]);
+		 estado = bajaProducto(listaProducto, TAM, cadena);
 		 mensajeEstado(estado, "Baja con exito. \n", "Baja sin exito. \n");
 		 break;
 
 		 case 3:
-		 estado = modificarProducto(listaProducto, TAM, cadena[0]);
+		 estado = modificarProducto(listaProducto, TAM, cadena);
 		 mensajeEstado(estado, "Modificacion con exito. \n", "Modificacion sin exito. \n");
 		 break;
 
 		 case 4:
-		 mostrarVariosProductos(listaProducto, TAM, cadena[0], cadena[1]);
+		 mostrarVariosProductos(listaProducto, TAM, listaTipo, TAM_TIPO, cadena);
 		 break;
 
 		 case 5:
 	     ordenarPorPrecio(listaProducto, TAM);
+	     mostrarVariosProductos(listaProducto, TAM, listaTipo, TAM_TIPO, cadena);
 		 break;
 
 		 case 6:
 		 ordenarPorDescripcion(listaProducto, TAM);
+		 mostrarVariosProductos(listaProducto, TAM, listaTipo, TAM_TIPO, cadena);
 		 break;
 
 		 case 7:
-		 estado = mostrarProductosCaros(listaProducto, TAM, precioMayor, cadena[0], cadena[1]);
+		 estado = mostrarProductosCaros(listaProducto, TAM, listaTipo, TAM_TIPO, precioMayor, cadena);
 		 mensajeEstado(estado, "listado con exito. \n", "listado sin exito. \n");
 		 break;
 
 		 case 8:
-		 estado = mostrarUnProductoPorPrecio(listaProducto, TAM, cadena[0], cadena[1], 700);
-		 mensajeEstado(estado, "listado con exito. \n", "listado sin exito. \n");
+		 estado = calcularPrecioPromedioDeTipo(listaProducto, TAM, listaTipo, TAM_TIPO);
+		 mensajeEstado(estado, "Operacion con exito. \n", "Operacion sin exito. \n");
 		 break;
 
 		 case 9:
-		 calcularPromedioDeTipo(listaProducto, TAM, promedio[0], IPHONE, contador[0], cadena[0]);
-		 calcularPromedioDeTipo(listaProducto, TAM, promedio[1], MAC, contador[1], cadena[0]);
-		 calcularPromedioDeTipo(listaProducto, TAM, promedio[2], IPAD, contador[2], cadena[0]);
-		 calcularPromedioDeTipo(listaProducto, TAM, promedio[3], ACCESORIOS, contador[3], cadena[0]);
+		 estado = mostrarProductosCaros(listaProducto, TAM, listaTipo, TAM_TIPO, precioMayor, cadena);
+		 mensajeEstado(estado, "listado con exito. \n", "listado sin exito. \n");
 		 break;
 
 		 case 10:
-		 estado = mostrarProductosBaratosDeUnTipo(listaProducto, TAM, precioMenor, cadena[0], cadena[1], IPHONE);
+		 estado = mostrarUnProductoPorPrecio(listaProducto, TAM, listaTipo, TAM_TIPO, 700, cadena);
 		 mensajeEstado(estado, "listado con exito. \n", "listado sin exito. \n");
 		 break;
 
 		 case 11:
-		 mostrarVariosProductosDeUnaNacionalidad(listaProducto, TAM, cadena[0], cadena[1], CHINA);
+		 estado = calcularPrecioPromedioDeTipo(listaProducto, TAM, listaTipo, TAM_TIPO);
+		 mensajeEstado(estado, "listado con exito. \n", "listado sin exito. \n");
 		 break;
 
 		 case 12:
-		 mostrarVariosProductosDeUnTipoConLaCondicionDePrecio(listaProducto, TAM, cadena[0], cadena[1], MAC, 700);
+		 estado = mostrarTipoMasBarato(listaProducto, TAM, listaTipo, TAM_TIPO, precioMenor, cadena, 1000);
+		 mensajeEstado(estado, "listado con exito. \n", "listado sin exito. \n");
 		 break;
 
 		 case 13:
-		 estado = mostrarProductosCarosDeUnTipo(listaProducto, TAM, precioMayor, cadena[0], cadena[1], ACCESORIOS);
+		 estado = mostrarProductosDeNaciolidadEnCuenta(listaProducto, TAM, listaTipo, TAM_TIPO, cadena, CHINA);
 		 mensajeEstado(estado, "listado con exito. \n", "listado sin exito. \n");
 		 break;
 
 		 case 14:
+		 estado = mostrarProductoDeTipoMayorDePrecio(listaProducto, TAM, listaTipo, TAM_TIPO, 700, cadena, 2);
+		 mensajeEstado(estado, "listado con exito. \n", "listado sin exito. \n");
 		 break;
 
 		 case 15:
+		 estado = mostrarTipoMasCaro(listaProducto, TAM, listaTipo, TAM_TIPO, precioMayor, cadena, 1003);
+		 mensajeEstado(estado, "listado con exito. \n", "listado sin exito. \n");
 		 break;
 
 		 case 16:
+		 mostrarVariosProductos(listaProducto, TAM, listaTipo, TAM_TIPO, cadena);
 		 break;
 
 		 case 17:
+	     estado = mostrarProductosPorTipo(listaTipo, TAM_TIPO, listaProducto, TAM, cadena);
+	     mensajeEstado(estado, "listado con exito. \n", "listado sin exito. \n");
 		 break;
 
 		 case 18:

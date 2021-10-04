@@ -1,6 +1,6 @@
 //amarilla juan sebastian 1C
 
-#include "ingresarDatos.h"
+#include "IngresarDatos.h"
 
 int pedirEntero(int entero, char mensaje[])
 {

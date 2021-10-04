@@ -33,5 +33,6 @@ org.eclipse.launchbar.core.descriptorType.default\:clase\ 1-0.exe/activeLaunchMo
 org.eclipse.launchbar.core.descriptorType.default\:clase\ 1-0.exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:clase\ 1.exe/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:clase\ 1.exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:clase\ 10-3.exe/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:clase\ 5-2.exe/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:clase\ 5-3.exe/activeLaunchMode=run
