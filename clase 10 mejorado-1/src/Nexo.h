@@ -8,8 +8,6 @@
 #include <string.h>
 #include "Producto.h"
 #include "TipoProducto.h"
-#include "IngresarDatos.h"
-#include "OtrasFunciones.h"
 #define OCUPADO 1
 #define VACIO 0
 

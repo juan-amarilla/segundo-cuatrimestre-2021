@@ -9,6 +9,7 @@
 #define TAM_CARACTER 50
 #define TAM 4
 #define TAM_TIPO 4
+#define TAM_NACIONALIDAD 3
 #define EEU 1
 #define CHINA 2
 #define OTRO 3
@@ -81,13 +82,6 @@ void ordenarPorPrecio(eProducto unProducto[], int tam);
 /// @param eProducto unProducto[]
 /// @param int tam
 void ordenarPorDescripcion(eProducto unProducto[], int tam);
-
-/// @fn void verificacionNacionalidad(int, char[])
-/// @brief su funcion es verificar el entero y luego verificar que nacionalidad es
-///
-/// @param int opcion
-/// @param char caracter[]
-void verificacionNacionalidad(int opcion, char caracter[]);
 
 /// @fn int buscarEstado(int)
 /// @brief su funcion es verificar si esta ocupado o vacio un estado de un producto
