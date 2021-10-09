@@ -35,12 +35,12 @@ void menu()
    printf("16-El listado de todos los productos con la descripción del tipo.\n");
    printf("17-Por cada tipo la lista de productos.\n");
    printf("18-El/los tipos de productos con mas productos importados.\n");
-   printf("19-La nacionalidad que solo fabrica Iphone.");
-   printf("20-Los productos ordenados por nacionalidad alfabéticamente.");
-   printf("21-La nacionalidad con más tipos de productos fabricados.");
-   printf("22-El precio promedio de productos por nacionalidad");
-   printf("23-Alta,baja y modificación de TIPO");
-   printf("24-Alta,baja y modificación de NACIONALIDAD");
+   printf("19-La nacionalidad que solo fabrica Iphone. \n");
+   printf("20-Los productos ordenados por nacionalidad alfabéticamente. \n");
+   printf("21-La nacionalidad con más tipos de productos fabricados. \n");
+   printf("22-El precio promedio de productos por nacionalidad. \n");
+   printf("23-Alta,baja y modificación de TIPO. \n");
+   printf("24-Alta,baja y modificación de NACIONALIDAD. \n");
    printf("25-Salir.\n");
 
 }

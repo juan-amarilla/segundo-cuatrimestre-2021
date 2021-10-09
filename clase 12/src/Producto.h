@@ -69,6 +69,15 @@ int bajaProducto(eProducto unProducto[], int tam, char cadena[]);
 /// @return retorna 1 si salio bien o 0 si salio mal
 int modificarProducto(eProducto unProducto[], int tam, char cadena[]);
 
+/// @fn int modificarUnDato(eProducto[], int, char[])
+/// @brief su funcion es modificar un dato de un producto
+///
+/// @param eProducto unProducto[]
+/// @param int tam
+/// @param char cadena[]
+/// @return retorna 1 si salio bien o 0 si salio mal
+int modificarUnDato(eProducto unProducto[], int tam, char cadena[]);
+
 /// @fn void ordenarPorPrecio(eProducto[], int)
 /// @brief su funcion es ordenar por precio los productos
 ///

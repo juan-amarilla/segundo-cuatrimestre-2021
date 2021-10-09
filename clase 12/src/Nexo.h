@@ -20,6 +20,8 @@ typedef struct
 
 }eAuxiliar;
 
+void recorrerProducto(eProducto unProducto[], int tam);
+
 /// @fn void mostrarProducto(eProducto, eTipoProducto, eNacionalidad)
 /// @brief mostrara un producto
 ///
@@ -74,6 +76,17 @@ int mostrarUnProductoPorPrecio(eProducto unProducto[], int tam, eTipoProducto un
 /// @param int tamTip
 /// @return retornara 1 si salio bien o 0 si salio mal
 int calcularPrecioPromedioDeTipo(eProducto unProducto[], int tam, eTipoProducto unTipo[], int tamTip);
+
+/// @fn int calcularPromedio(eTipoProducto[], int, int[], float[], float[])
+/// @brief su funcion es calcular el promedio de cada tipo y mostrarlo luego
+///
+/// @param eTipoProducto unTipo[]
+/// @param int tamTip
+/// @param int contador[]
+/// @param float acumulador[]
+/// @param float promedio[]
+/// @return retornara 1 si salio bien o 0 si salio mal
+int calcularPromedio(eTipoProducto unTipo[], int tamTip, int contador[], float acumulador[], float promedio[]);
 
 /// @fn int mostrarTipoMasBarato(eProducto[], int, eTipoProducto[], int, eNacionalidad[], int, int, float)
 /// @brief listara el mas barato de un tipo de los productos
@@ -154,6 +167,16 @@ int mostrarProductosPorTipo(eTipoProducto unTipo[], int tamTip, eProducto unProd
 /// @return retorna 1 si salio bien o 0 si salio mal
 int tiposMasCantidad(eTipoProducto unTipo[], int tamTip, eProducto unProducto[], int tam, eNacionalidad unaNacionalidad[], int tamNac);
 
-int nacionalidadQueTieneMasTipoDefinido();
+/// @fn int mostrarMasCantidadDeTipo(eTipoProducto[], int, eProducto[], int, eNacionalidad[], int)
+/// @brief su funcion es calcular y mostrar la cantidad de tipos importados mas altos
+///
+/// @param eTipoProducto unTipo[]
+/// @param int tamTip
+/// @param eProducto unProducto[]
+/// @param int tam
+/// @param eNacionalidad unaNacionalidad[]
+/// @param int tamNac
+/// @return retorna 1 si salio bien o 0 si salio mal
+int mostrarMasCantidadDeTipo(eTipoProducto unTipo[], int tamTip, eProducto unProducto[], int tam, eNacionalidad unaNacionalidad[], int tamNac);
 
 #endif /* NEXO_H_ */

@@ -2,6 +2,16 @@
 
 #include "Nexo.h"
 
+void recorrerProducto(eProducto unProducto[], int tam)
+{
+	int i;
+
+	for(i=0;i<tam;i++)
+	{
+
+	}
+
+}
 void mostrarProducto(eProducto unProducto, eTipoProducto unTipo, eNacionalidad unaNacionalidad)
 {
 
@@ -96,8 +106,6 @@ int calcularPrecioPromedioDeTipo(eProducto unProducto[], int tam, eTipoProducto 
      float acumulador[TAM_TIPO] = {};
      float promedio[TAM_TIPO] = {};
 
-     retorno = 0;
-
      for(i=0;i<tam;i++)
      {
         if(buscarEstado(unProducto[i].estado) == OCUPADO)
@@ -114,28 +122,41 @@ int calcularPrecioPromedioDeTipo(eProducto unProducto[], int tam, eTipoProducto 
 
      }
 
-     for(i=0;i<tamTip;i++)
-     {
-          if(contador[i] != 0)
-          {
-              promedio[i] = acumulador[i] / contador[i];
-          }
-     }
-
-     for(i=0;i<tamTip;i++)
-     {
-    	  if(contador[i] != 0)
-    	  {
-    		  printf("El promedio de %s es: %.2f \n", unTipo[i].descripcionTipo, promedio[i]);
-
-    		  if(retorno == 0)
-    		  {
-    		     retorno = 1;
-    		  }
-    	  }
-     }
+     retorno = calcularPromedio(unTipo, tamTip, contador, acumulador, promedio);
 
      return retorno;
+
+}
+
+int calcularPromedio(eTipoProducto unTipo[], int tamTip, int contador[], float acumulador[], float promedio[])
+{
+	int retorno;
+	int i;
+
+	retorno = 0;
+
+	for(i=0;i<tamTip;i++)
+	{
+	          if(contador[i] != 0)
+	          {
+	              promedio[i] = acumulador[i] / contador[i];
+	          }
+	}
+
+    for(i=0;i<tamTip;i++)
+	{
+	   if(contador[i] != 0)
+	   {
+	       printf("El promedio de %s es: %.2f \n", unTipo[i].descripcionTipo, promedio[i]);
+
+	       if(retorno == 0)
+	       {
+	    	  retorno = 1;
+	       }
+	   }
+	}
+
+	return retorno;
 
 }
 
@@ -271,6 +292,15 @@ int mostrarProductosPorTipo(eTipoProducto unTipo[], int tamTip, eProducto unProd
 
 int tiposMasCantidad(eTipoProducto unTipo[], int tamTip, eProducto unProducto[], int tam, eNacionalidad unaNacionalidad[], int tamNac)
 {
+   int retorno;
+
+   retorno = mostrarMasCantidadDeTipo(unTipo, tamTip, unProducto, tam, unaNacionalidad, tamNac);
+
+   return retorno;
+}
+
+int mostrarMasCantidadDeTipo(eTipoProducto unTipo[], int tamTip, eProducto unProducto[], int tam, eNacionalidad unaNacionalidad[], int tamNac)
+{
 	int retorno;
 	int i;
 	int j;
@@ -282,56 +312,57 @@ int tiposMasCantidad(eTipoProducto unTipo[], int tamTip, eProducto unProducto[],
 
 	for(i=0;i<tamTip;i++)
 	{
-		auxiliar[i].contador = 0;
-		auxiliar[i].id = unTipo[i].idTipo;
+			auxiliar[i].contador = 0;
+			auxiliar[i].id = unTipo[i].idTipo;
 
 	}
 
 	for(i = 0; i < tamTip; i++)
 	{
-	      for(j = 0; j < tam; j++)
-	      {
-	    	  if(unProducto[j].estado == OCUPADO)
-	    	  {
-	    		  k = verificarNacionalidad(unaNacionalidad, tamNac, unProducto[j].nacionalidad);
+		 for(j = 0; j < tam; j++)
+		 {
+		    if(unProducto[j].estado == OCUPADO)
+		    {
+		    	k = verificarNacionalidad(unaNacionalidad, tamNac, unProducto[j].nacionalidad);
 
-	    		  if(unTipo[i].idTipo == unProducto[j].tipo && k != -1)
-	    		  {
-	    		  	   auxiliar[i].contador++;
-	    		  }
+		    	if(unTipo[i].idTipo == unProducto[j].tipo && k != -1)
+		    	{
+		    		  	   auxiliar[i].contador++;
+		    	}
 
-	    	  }
-	      }
-   }
+		    }
+		 }
+	}
 
-   for(i=0;i<tamTip;i++)
-   {
-	   if(i == 0 || maximo < auxiliar[i].contador)
-	   {
-		   maximo = auxiliar[i].contador;
-	   }
+	for(i=0;i<tamTip;i++)
+	{
+		if(i == 0 || maximo < auxiliar[i].contador)
+		{
+			maximo = auxiliar[i].contador;
+		}
 
-   }
+	}
 
-   for(i=0;i<tamTip;i++)
-   {
-	   if(maximo == auxiliar[i].contador)
-	   {
-		   for(j=0;j<tam;j++)
-		   {
-			   if(auxiliar[i].id == unTipo[i].idTipo)
-			   {
-				   printf("El tipo %s tiene como maximo de cantidad importado: %d \n", unTipo[i].descripcionTipo, maximo);
-				   retorno = 1;
-				   break;
+	for(i=0;i<tamTip;i++)
+	{
+		 if(maximo == auxiliar[i].contador)
+		 {
+			 for(j=0;j<tam;j++)
+			 {
+				 if(auxiliar[i].id == unTipo[i].idTipo)
+				 {
+					 printf("El tipo %s tiene como maximo de cantidad importado: %d \n", unTipo[i].descripcionTipo, maximo);
+					 retorno = 1;
+					 break;
 
-			   }
+				 }
 
-		   }
+			 }
 
-	   }
+		 }
 
-   }
+	}
 
 	return retorno;
+
 }

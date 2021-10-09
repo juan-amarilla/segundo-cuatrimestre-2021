@@ -87,10 +87,10 @@ Se agregan los siguientes informes:
 
 int main(void)
 {
-	eProducto listaProducto[TAM];/*= {{100,"arg",1, 1003,140,OCUPADO},
+	eProducto listaProducto[TAM]= {{100,"arg",1, 1000,140,OCUPADO},
 			                        {200,"br",2, 1002,705,OCUPADO},
-			                        {300,"ark",3, 1003,700,OCUPADO},
-			                        {400,"yy",1, 1002,400,OCUPADO}};*/
+			                        {300,"ark",3, 1000,700,OCUPADO},
+			                        {400,"yy",1, 1002,400,OCUPADO}};
 
 	eTipoProducto listaTipo[TAM_TIPO]={ {1000, "Iphone"},
 			                            {1001, "Ipad"},
@@ -111,7 +111,7 @@ int main(void)
 
 	setbuf(stdout, NULL);
 
-	inicializarProductos(listaProducto, TAM);
+	//inicializarProductos(listaProducto, TAM);
 
 	do
 	{

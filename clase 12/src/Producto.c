@@ -4,51 +4,60 @@
 
 int modificarProducto(eProducto unProducto[], int tam, char cadena[])
 {
-	int i;
-	int idProducto;
 	int retorno;
-	int opcion;
 	int seguro;
-
-	retorno = 0;
-	idProducto = -1;
 
 	pedirEnteroValidado(cadena, "Estas seguro de modificar el producto? Ingrese el numero 1-Si o 2-No \n", &seguro);
 
 	if(seguro == 1)
 	{
-		pedirEnteroValidado(cadena, "Ingrese ID de producto para la modificacion: \n", &idProducto);
-
-		for(i=0;i<tam;i++)
-		{
-			if(unProducto[i].idProducto == idProducto && buscarEstado(unProducto[i].estado) != VACIO)
-			{
-				pedirEnteroValidado(cadena, "-1 Modificar precio -2 Modificar tipo \n", &opcion);
-
-				if(opcion == 1)
-				{
-					pedirFlotanteValidado(cadena, "Ingrese precio: \n", &unProducto[i].precio);
-					retorno = 1;
-					break;
-				}
-
-				else
-				{
-					if(opcion == 2)
-					{
-						pedirEnteroValidado(cadena, "Ingrese tipo en forma numerica: 1000-IPHONE 1001-IPAD 1002-MAC 1003-ACCESORIOS. \n", &unProducto[i].tipo);
-						retorno = 1;
-						break;
-					}
-				}
-			}
-		}
+		retorno = modificarUnDato(unProducto, tam, cadena);
 
 	}
 
 	else
 	{
 		printf("La modificacion no se logro \n");
+	}
+
+	return retorno;
+
+}
+
+int modificarUnDato(eProducto unProducto[], int tam, char cadena[])
+{
+	int i;
+	int retorno;
+	int idProducto;
+	int opcion;
+
+	retorno = 0;
+
+	pedirEnteroValidado(cadena, "Ingrese ID de producto para la modificacion: \n", &idProducto);
+
+	for(i=0;i<tam;i++)
+	{
+		if(unProducto[i].idProducto == idProducto && buscarEstado(unProducto[i].estado) != VACIO)
+		{
+			pedirEnteroValidado(cadena, "-1 Modificar precio -2 Modificar tipo \n", &opcion);
+
+			if(opcion == 1)
+			{
+					pedirFlotanteValidado(cadena, "Ingrese precio: \n", &unProducto[i].precio);
+					retorno = 1;
+					break;
+			}
+
+			else
+			{
+				if(opcion == 2)
+				{
+					pedirEnteroValidado(cadena, "Ingrese tipo en forma numerica: 1000-IPHONE 1001-IPAD 1002-MAC 1003-ACCESORIOS. \n", &unProducto[i].tipo);
+					retorno = 1;
+					break;
+				}
+			}
+		}
 	}
 
 	return retorno;
