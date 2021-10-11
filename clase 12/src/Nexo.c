@@ -2,16 +2,48 @@
 
 #include "Nexo.h"
 
-void recorrerProducto(eProducto unProducto[], int tam)
+void inicializarAuxiliarConTipo(eAuxiliar unAuxiliar[], int tam, eTipoProducto unTipo[])
 {
 	int i;
 
 	for(i=0;i<tam;i++)
 	{
-
+		unAuxiliar[i].contador = 0;
+		unAuxiliar[i].acumulador = 0;
+		unAuxiliar[i].promedio = 0;
+		unAuxiliar[i].id = unTipo[i].idTipo;
 	}
 
 }
+
+void inicializarAuxiliarConNacionalidad(eAuxiliar unAuxiliar[], int tam, eNacionalidad unaNacionalidad[])
+{
+	int i;
+
+	for(i=0;i<tam;i++)
+	{
+		unAuxiliar[i].contador = 0;
+		unAuxiliar[i].acumulador = 0;
+		unAuxiliar[i].promedio = 0;
+		unAuxiliar[i].id = unaNacionalidad[i].idNacionalidad;
+	}
+
+}
+
+void inicializarAuxiliarConProducto(eAuxiliar unAuxiliar[], int tam, eProducto unProducto[])
+{
+	int i;
+
+	for(i=0;i<tam;i++)
+	{
+		unAuxiliar[i].contador = 0;
+		unAuxiliar[i].acumulador = 0;
+		unAuxiliar[i].promedio = 0;
+		unAuxiliar[i].id = unProducto[i].idProducto;
+	}
+
+}
+
 void mostrarProducto(eProducto unProducto, eTipoProducto unTipo, eNacionalidad unaNacionalidad)
 {
 
@@ -303,63 +335,94 @@ int mostrarMasCantidadDeTipo(eTipoProducto unTipo[], int tamTip, eProducto unPro
 {
 	int retorno;
 	int i;
-	int j;
-	int k;
 	int maximo;
 	eAuxiliar auxiliar[tamTip];
 
 	retorno = 0;
+	maximo = 0;
 
-	for(i=0;i<tamTip;i++)
-	{
-			auxiliar[i].contador = 0;
-			auxiliar[i].id = unTipo[i].idTipo;
+	inicializarAuxiliarConTipo(auxiliar, tamTip, unTipo);
 
-	}
+	recorrerTipoContandoMayor(unTipo, tamTip, unProducto, tam, unaNacionalidad, tamNac, auxiliar);
 
-	for(i = 0; i < tamTip; i++)
-	{
-		 for(j = 0; j < tam; j++)
-		 {
-		    if(unProducto[j].estado == OCUPADO)
-		    {
-		    	k = verificarNacionalidad(unaNacionalidad, tamNac, unProducto[j].nacionalidad);
-
-		    	if(unTipo[i].idTipo == unProducto[j].tipo && k != -1)
-		    	{
-		    		  	   auxiliar[i].contador++;
-		    	}
-
-		    }
-		 }
-	}
-
-	for(i=0;i<tamTip;i++)
-	{
-		if(i == 0 || maximo < auxiliar[i].contador)
-		{
-			maximo = auxiliar[i].contador;
-		}
-
-	}
+	maximo = sacarMaximo(unTipo, tamTip, auxiliar, maximo);
 
 	for(i=0;i<tamTip;i++)
 	{
 		 if(maximo == auxiliar[i].contador)
 		 {
-			 for(j=0;j<tam;j++)
-			 {
-				 if(auxiliar[i].id == unTipo[i].idTipo)
-				 {
-					 printf("El tipo %s tiene como maximo de cantidad importado: %d \n", unTipo[i].descripcionTipo, maximo);
-					 retorno = 1;
-					 break;
-
-				 }
-
-			 }
-
+			 retorno = mostrarElTipoMasImportado(unTipo, auxiliar, tam, maximo, i);
 		 }
+
+	}
+
+	return retorno;
+
+}
+
+void recorrerTipoContandoMayor(eTipoProducto unTipo[], int tamTip, eProducto unProducto[], int tam, eNacionalidad unaNacionalidad[], int tamNac, eAuxiliar unAuxiliar[])
+{
+	int i;
+
+	for(i = 0; i < tamTip; i++)
+	{
+		recorrerTipoContandoMayorParte2(unTipo, tamTip, unProducto, tam, unaNacionalidad, tamNac, unAuxiliar, i);
+
+	}
+}
+
+void recorrerTipoContandoMayorParte2(eTipoProducto unTipo[], int tamTip, eProducto unProducto[], int tam, eNacionalidad unaNacionalidad[], int tamNac, eAuxiliar unAuxiliar[], int i)
+{
+	int j;
+	int k;
+
+	for(j = 0; j < tam; j++)
+	{
+		if(unProducto[j].estado == OCUPADO)
+		{
+			  k = verificarNacionalidad(unaNacionalidad, tamNac, unProducto[j].nacionalidad);
+
+			   if(unTipo[i].idTipo == unProducto[j].tipo && k != -1)
+			   {
+				   unAuxiliar[i].contador++;
+			   }
+
+		}
+	}
+
+}
+
+int sacarMaximo(eTipoProducto unTipo[], int tamTip, eAuxiliar auxiliar[], int maximo)
+{
+	int i;
+
+	for(i=0;i<tamTip;i++)
+	{
+			if(i == 0 || maximo < auxiliar[i].contador)
+			{
+				maximo = auxiliar[i].contador;
+			}
+
+	}
+
+	return maximo;
+
+}
+
+int mostrarElTipoMasImportado(eTipoProducto unTipo[], eAuxiliar auxiliar[], int tam, int maximo, int i)
+{
+	int retorno;
+	int j;
+
+	for(j=0;j<tam;j++)
+	{
+		if(auxiliar[i].id == unTipo[i].idTipo)
+		{
+				printf("El tipo %s tiene como maximo de cantidad importado: %d \n", unTipo[i].descripcionTipo, maximo);
+				retorno = 1;
+				break;
+
+		}
 
 	}
 

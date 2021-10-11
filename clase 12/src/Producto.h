@@ -10,9 +10,6 @@
 #define TAM 4
 #define TAM_TIPO 4
 #define TAM_NACIONALIDAD 3
-#define EEU 1
-#define CHINA 2
-#define OTRO 3
 #define OCUPADO 1
 #define VACIO 0
 

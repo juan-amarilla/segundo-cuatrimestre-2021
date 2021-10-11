@@ -2,7 +2,6 @@
 
 #ifndef NEXO_H_
 #define NEXO_H_
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -17,10 +16,33 @@ typedef struct
 	int id;
 	int contador;
 	float acumulador;
+	float promedio;
 
 }eAuxiliar;
 
-void recorrerProducto(eProducto unProducto[], int tam);
+/// @fn void inicializarAuxiliar(eAuxiliar[], int, eTipoProducto[])
+/// @brief su funcion es inicializar los contadores y acumuladores en 0 y trabaja con las id de tipos
+///
+/// @param eAuxiliar unAuxiliar[]
+/// @param int tam
+/// @param eTipoProducto unTipo[]
+void inicializarAuxiliarConTipo(eAuxiliar unAuxiliar[], int tam, eTipoProducto unTipo[]);
+
+/// @fn void inicializarAuxiliarConNacionalidad(eAuxiliar[], int, eNacionalidad[])
+/// @brief su funcion es inicializar los contadores y acumuladores en 0 y trabaja con las id de nacionalidades
+///
+/// @param eAuxiliar unAuxiliar[]
+/// @param int tam
+/// @param eNacionalidad unaNacionalidad[]
+void inicializarAuxiliarConNacionalidad(eAuxiliar unAuxiliar[], int tam, eNacionalidad unaNacionalidad[]);
+
+/// @fn void inicializarAuxiliarConProducto(eAuxiliar[], int, eProducto[])
+/// @brief su funcion es inicializar los contadores y acumuladores en 0 y trabaja con las id de productos
+///
+/// @param eAuxiliar unAuxiliar[]
+/// @param int tam
+/// @param eProducto unProducto[]
+void inicializarAuxiliarConProducto(eAuxiliar unAuxiliar[], int tam, eProducto unProducto[]);
 
 /// @fn void mostrarProducto(eProducto, eTipoProducto, eNacionalidad)
 /// @brief mostrara un producto
@@ -178,5 +200,52 @@ int tiposMasCantidad(eTipoProducto unTipo[], int tamTip, eProducto unProducto[],
 /// @param int tamNac
 /// @return retorna 1 si salio bien o 0 si salio mal
 int mostrarMasCantidadDeTipo(eTipoProducto unTipo[], int tamTip, eProducto unProducto[], int tam, eNacionalidad unaNacionalidad[], int tamNac);
+
+/// @fn void recorrerTipoContandoMayor(eTipoProducto[], int, eProducto[], int, eNacionalidad[], int, eAuxiliar[])
+/// @brief su funcion es contar el tipo mayor
+///
+/// @param eTipoProducto unTipo[]
+/// @param int tamTip
+/// @param eProducto unProducto[]
+/// @param int tam
+/// @param eNacionalidad unaNacionalidad[]
+/// @param int tamNac
+/// @param eAuxiliar unAuxiliar[]
+void recorrerTipoContandoMayor(eTipoProducto unTipo[], int tamTip, eProducto unProducto[], int tam, eNacionalidad unaNacionalidad[], int tamNac, eAuxiliar unAuxiliar[]);
+
+/// @fn void recorrerTipoContandoMayorParte2(eTipoProducto[], int, eProducto[], int, eNacionalidad[], int, eAuxiliar[], int)
+/// @brief su funcion es contar el tipo mayor recorriendo el listado de productos
+///
+/// @param eTipoProducto unTipo[]
+/// @param int tamTip
+/// @param eProducto unProducto[]
+/// @param int tam
+/// @param eNacionalidad unaNacionalidad[]
+/// @param int tamNac
+/// @param eAuxiliar unAuxiliar[]
+/// @param int i
+void recorrerTipoContandoMayorParte2(eTipoProducto unTipo[], int tamTip, eProducto unProducto[], int tam, eNacionalidad unaNacionalidad[], int tamNac, eAuxiliar unAuxiliar[], int i);
+
+/// @fn int sacarMaximo(eTipoProducto[], int, eAuxiliar[], int)
+/// @brief su funcion es sacar el maximo
+///
+/// @param eTipoProducto unTipo[]
+/// @param int tamTip
+/// @param eAuxiliar auxiliar[]
+/// @param int maximo
+/// @return retorna el maximo
+int sacarMaximo(eTipoProducto unTipo[], int tamTip, eAuxiliar auxiliar[], int maximo);
+
+/// @fn int mostrarElTipoMasImportado(eTipoProducto[], eAuxiliar[], int, int, int)
+/// @brief su funcion es mostrar el tipo mas importado
+///
+/// @param eTipoProducto unTipo[]
+/// @param eAuxiliar auxiliar[]
+/// @param int tam
+/// @param int maximo
+/// @param int i
+/// @return retorna 1 si salio bien o 0 si salio mal
+int mostrarElTipoMasImportado(eTipoProducto unTipo[], eAuxiliar auxiliar[], int tam, int maximo, int i);
+
 
 #endif /* NEXO_H_ */

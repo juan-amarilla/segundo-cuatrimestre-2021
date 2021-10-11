@@ -20,6 +20,16 @@ void mensajeEstado(int estado, char mensaje[], char error[]);
 ///
 void menu();
 
+/// @fn void menuDeTipo()
+/// @brief su funcion es mostrar un menu de tipo
+///
+void menuDeTipo();
+
+/// @fn void menuDeTipo()
+/// @brief su funcion es mostrar un menu de nacionalidad
+///
+void menuDeNacionalidad();
+
 /// @fn int validarNumeroEntero(int*, char[])
 /// @brief su funcion es validar si el numero es entero
 ///

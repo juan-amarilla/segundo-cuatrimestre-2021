@@ -79,7 +79,7 @@ Se agregan los siguientes informes:
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "Nexo.h"
+#include "NexoSegundo.h"
 #define TAM 4
 #define TAM_TIPO 4
 #define TAM_NACIONALIDAD 3
@@ -90,16 +90,16 @@ int main(void)
 	eProducto listaProducto[TAM]= {{100,"arg",1, 1000,140,OCUPADO},
 			                        {200,"br",2, 1002,705,OCUPADO},
 			                        {300,"ark",3, 1000,700,OCUPADO},
-			                        {400,"yy",1, 1002,400,OCUPADO}};
+			                        {400,"yy",3, 1002,400,OCUPADO}};
 
-	eTipoProducto listaTipo[TAM_TIPO]={ {1000, "Iphone"},
-			                            {1001, "Ipad"},
-			                            {1002, "Mac"},
-			                            {1003, "Accesorios"} };
+	eTipoProducto listaTipo[TAM_TIPO]={ {1000, "Iphone",OCUPADO},
+			                            {1001, "Ipad",OCUPADO},
+			                            {1002, "Mac",OCUPADO},
+			                            {1003, "Accesorios",OCUPADO} };
 
-    eNacionalidad listaNacionalidad[TAM_NACIONALIDAD]={{1,"EEU"},
-                                                       {2,"CHINA"},
-													   {3,"OTRO"}};
+    eNacionalidad listaNacionalidad[TAM_NACIONALIDAD]={{1,"EEU",OCUPADO},
+                                                       {2,"CHINA",OCUPADO},
+													   {3,"OTRO",OCUPADO}};
 	int estado;
 	int opcion;
 	char cadena[CARACTERES];
@@ -210,21 +210,99 @@ int main(void)
 	     break;
 
 		 case 19:
-		 break;
+         estado = nacionalidadQueFabricaUnTipo(listaNacionalidad, TAM_NACIONALIDAD, listaTipo, TAM_TIPO, listaProducto, TAM, "Iphone");
+         mensajeEstado(estado, "Informe con exito. \n", "Informe sin exito. \n");
+         break;
 
 		 case 20:
+		 estado = productosOrdenadosPorNacionalidad(listaProducto, TAM, listaNacionalidad, TAM_NACIONALIDAD);
+		 mensajeEstado(estado, "Ordenamiento con exito. \n", "Ordenamiento sin exito. \n");
 	     break;
 
 		 case 21:
+		 estado = nacionalidadQueTieneMayoresTipos(listaNacionalidad, TAM_NACIONALIDAD, listaProducto, TAM);
+		 mensajeEstado(estado, "Informe con exito. \n", "Informe sin exito. \n");
 		 break;
 
 		 case 22:
+		 estado  = precioPromedioPorNacionalidad(listaNacionalidad, TAM_NACIONALIDAD, listaProducto, TAM);
+		 mensajeEstado(estado, "Informe con exito. \n", "Informe sin exito. \n");
 		 break;
 
 		 case 23:
+		 do
+		 {
+
+		       menuDeTipo();
+		       pedirEnteroValidado(cadena, "-Ingrese una opcion valida: \n", &opcion);
+
+		       switch(opcion)
+		       {
+		              case 1:
+		              estado = altaTipo(listaTipo, TAM_TIPO, cadena);
+		              mensajeEstado(estado, "Tipo ingresado con exito. \n", "Tipo ingresado sin exito. \n");
+		              break;
+
+		              case 2:
+		              estado =  bajaTipo(listaTipo, TAM_TIPO, cadena);
+		              mensajeEstado(estado, "Baja con exito. \n", "Baja sin exito. \n");
+		              break;
+
+		              case 3:
+		              estado = modificarTipo(listaTipo, TAM_TIPO, cadena);
+		              mensajeEstado(estado, "Modificacion con exito. \n", "Modificacion sin exito. \n");
+		              break;
+
+		              case 4:
+		              estado = 1;
+		              mensajeEstado(estado, "Saliste de manera exitosa el menu de tipo. \n", "Error. \n");
+		              break;
+
+		              default:
+		              estado = 0;
+		              mensajeEstado(estado, "Gracias por usar mi programa. \n", "Error: Ingrese una opcion valida. \n");
+		              break;
+		     }
+
+		 } while(opcion != 4);
 		 break;
 
 		 case 24:
+		 do
+		 {
+
+			menuDeNacionalidad();
+			pedirEnteroValidado(cadena, "-Ingrese una opcion valida: \n", &opcion);
+
+			switch(opcion)
+		    {
+			 	case 1:
+			    estado = altaNacionalidad(listaNacionalidad, TAM_NACIONALIDAD, cadena);
+			 	mensajeEstado(estado, "Nacionalidad ingresado con exito. \n", "Nacionalidad ingresado sin exito. \n");
+			 	break;
+
+			 	case 2:
+			    estado = bajaNacionalidad(listaNacionalidad, TAM_NACIONALIDAD, cadena);
+			 	mensajeEstado(estado, "Baja con exito. \n", "Baja sin exito. \n");
+			 	break;
+
+			 	case 3:
+			 	estado = modificarNacionalidad(listaNacionalidad, TAM_NACIONALIDAD, cadena);
+			 	mensajeEstado(estado, "Modificacion con exito. \n", "Modificacion sin exito. \n");
+			 	break;
+
+			 	case 4:
+			 	estado = 1;
+			    mensajeEstado(estado, "Saliste de manera exitosa el menu de nacionalidad. \n", "Error. \n");
+			 	break;
+
+			 	default:
+			 	estado = 0;
+			 	mensajeEstado(estado, "Gracias por usar mi programa. \n", "Error: Ingrese una opcion valida. \n");
+			    break;
+			 }
+
+		 } while(opcion != 4);
 		 break;
 
 		 case 25:

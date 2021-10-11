@@ -45,6 +45,24 @@ void menu()
 
 }
 
+void menuDeTipo()
+{
+	printf("1-Alta Tipo\n");
+	printf("2-Baja Tipo\n");
+	printf("3-Modificar Tipo\n");
+	printf("4-Salir\n");
+
+}
+
+void menuDeNacionalidad()
+{
+	printf("1-Alta nacionalidad\n");
+	printf("2-Baja nacionalidad\n");
+	printf("3-Modificar nacionalidad\n");
+	printf("4-Salir\n");
+
+}
+
 int validarNumeroEntero(int* numeroEntero, char numero[])
 {
 	int i;
