@@ -1,16 +1,5 @@
-20:00:57 **** Incremental Build of configuration Debug for project clase 12 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 12.o" "..\\src\\clase 12.c" 
-gcc -o "clase 12.exe" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 12.o" 
-Info: Nothing to build for clase 12
-20:01:41 **** Incremental Build of configuration Debug for project clase 12 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 12.o" "..\\src\\clase 12.c" 
-gcc -o "clase 12.exe" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 12.o" 
-20:16:00 **** Incremental Build of configuration Debug for project clase 12 ****
+12:29:56 **** Incremental Build of configuration Debug for project clase 14 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoSegundo.o" "..\\src\\NexoSegundo.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nacionalidad.o" "..\\src\\Nacionalidad.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 12.o" "..\\src\\clase 12.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
-gcc -o "clase 12.exe" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 12.o" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
+gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
