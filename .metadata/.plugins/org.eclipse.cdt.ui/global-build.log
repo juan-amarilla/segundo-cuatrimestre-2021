@@ -1,5 +1,24 @@
-12:29:56 **** Incremental Build of configuration Debug for project clase 14 ****
+19:28:13 **** Incremental Build of configuration Debug for project clase 14 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoSegundo.o" "..\\src\\NexoSegundo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
+gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
+19:42:32 **** Incremental Build of configuration Debug for project clase 14 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoSegundo.o" "..\\src\\NexoSegundo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
+gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
+19:45:19 **** Incremental Build of configuration Debug for project clase 14 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoSegundo.o" "..\\src\\NexoSegundo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
+..\src\clase 14.c:103:19: error: missing terminating > character
+ #include <stdio.h<
+                   ^
+..\src\clase 14.c:103:19: fatal error: c:\mingw\lib\gcc\mingw32\6.3.0\include\stdio.h<: Invalid argument
+compilation terminated.
+19:45:26 **** Incremental Build of configuration Debug for project clase 14 ****
+Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
 gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 

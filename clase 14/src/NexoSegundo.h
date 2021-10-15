@@ -137,7 +137,7 @@ int nacionalidadQueTieneMayoresTiposSacarMaximo(int tamNac, eAuxiliar auxiliar[]
 int nacionalidadQueTieneMayoresTiposMostrarlo(eNacionalidad unaNacionalidad[], int tamNac, int maximo, eAuxiliar auxiliar[]);
 
 /// @fn int precioPromedioPorNacionalidad(eNacionalidad[], int, eProducto[], int)
-/// @brief su funcion es calcular el precio promedio de cada nacionalidad
+/// @brief su funcion es calcular el precio promedio de cada nacionalidad y mostrarlo
 ///
 /// @param eNacionalidad unaNacionalidad[]
 /// @param int tamNac
@@ -145,5 +145,21 @@ int nacionalidadQueTieneMayoresTiposMostrarlo(eNacionalidad unaNacionalidad[], i
 /// @param int tam
 /// @return retorna 1 si salio bien o 0 si salio mal
 int precioPromedioPorNacionalidad(eNacionalidad unaNacionalidad[], int tamNac, eProducto unProducto[], int tam);
+
+/// @fn void calcularPrecioPromedioPorNacionalidad(eAuxiliar[], int)
+/// @brief su funcion es calcular el promedio de cada nacionalidad
+///
+/// @param eAuxiliar auxiliar[]
+/// @param int tamNac
+void calcularPrecioPromedioPorNacionalidad(eAuxiliar auxiliar[], int tamNac);
+
+/// @fn int mostrarPromedioDeNacionalidad(eAuxiliar[], eNacionalidad[], int)
+/// @brief su funcion es mostrar el promedio de cada nacionalidad
+///
+/// @param eAuxiliar auxiliar[]
+/// @param eNacionalidad unaNacionalidad[]
+/// @param int tamNac
+/// @return retorna 1 si salio bien o 0 si salio mal
+int mostrarPromedioDeNacionalidad(eAuxiliar auxiliar[], eNacionalidad unaNacionalidad[], int tamNac);
 
 #endif /* NEXOSEGUNDO_H_ */

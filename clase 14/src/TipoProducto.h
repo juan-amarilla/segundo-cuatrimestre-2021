@@ -62,6 +62,14 @@ eTipoProducto pedirTipo(eTipoProducto unTipo, char cadena[]);
 /// @return retorna 1 si salio bien o 0 si salio mal
 int bajaTipo(eTipoProducto unTipo[], int tamTip, eProducto unProducto[], int tam, char cadena[]);
 
+/// @fn void bajaTipoDeCascada(eProducto[], int, int)
+/// @brief su funcion es dar de baja los productos que dependan de ese tipo
+///
+/// @param eProducto unProducto[]
+/// @param int tam
+/// @param int id
+void bajaTipoDeCascada(eProducto unProducto[], int tam, int id);
+
 /// @fn int modificarTipo(eTipoProducto[], int, char[])
 /// @brief su funcion es poder modificar el tipo
 ///

@@ -60,6 +60,14 @@ eNacionalidad pedirNacionalidad(eNacionalidad unaNacionalidad, char cadena[]);
 /// @return retorna 1 si salio bien o 0 si salio mal
 int bajaNacionalidad(eNacionalidad unaNacionalidad[], int tamNac, eProducto unProducto[], int tam, char cadena[]);
 
+/// @fn void bajaNacionalidadDeCascada(eProducto[], int, int)
+/// @brief su funcion es dar de baja los productos que dependan de esa nacionalidad
+///
+/// @param eProducto unProducto[]
+/// @param int tam
+/// @param int id
+void bajaNacionalidadDeCascada(eProducto unProducto[], int tam, int id);
+
 /// @fn int modificarNacionalidad(eNacionalidad[], int, char[])
 /// @brief su funcion es modificar la nacionalidad
 ///

@@ -92,14 +92,7 @@ int bajaNacionalidad(eNacionalidad unaNacionalidad[], int tamNac, eProducto unPr
 			}
 		}
 
-		for(i=0;i<tam;i++)
-		{
-			if(idNacionalidad == unProducto[i].nacionalidad && buscarEstadoDeNacionalidad(unProducto[i].estado) != VACIO)
-			{
-				unProducto[i].estado = VACIO;
-			}
-
-		}
+		bajaNacionalidadDeCascada(unProducto, tam, idNacionalidad);
 
 	}
 
@@ -110,6 +103,21 @@ int bajaNacionalidad(eNacionalidad unaNacionalidad[], int tamNac, eProducto unPr
 	}
 
 	return retorno;
+
+}
+
+void bajaNacionalidadDeCascada(eProducto unProducto[], int tam, int id)
+{
+	int i;
+
+	for(i=0;i<tam;i++)
+	{
+		if(id == unProducto[i].nacionalidad && buscarEstadoDeNacionalidad(unProducto[i].estado) != VACIO)
+		{
+			unProducto[i].estado = VACIO;
+		}
+
+	}
 
 }
 

@@ -47,7 +47,9 @@ void inicializarAuxiliarConProducto(eAuxiliar unAuxiliar[], int tam, eProducto u
 void mostrarProducto(eProducto unProducto, eTipoProducto unTipo, eNacionalidad unaNacionalidad)
 {
 
-    printf("%5d %12s %17s %26s %20.2f\n\n",  unProducto.idProducto,
+
+	printf("|           |                |                    |               |                     |\n");
+    printf("%5d      %12s %17s %26s %20.2f\n\n",  unProducto.idProducto,
     		                                 unProducto.descripcion,
 											 unaNacionalidad.descripcionNacionalidad,
 								             unTipo.descripcionTipo,
@@ -63,7 +65,7 @@ void mostrarVariosProductos(eProducto unProducto[], int tam, eTipoProducto unTip
 
 	printf(" ________________________________________________________________________________________\n");
     printf("|ID         |DESCRIPCION     |NACIONALIDAD        |TIPO           |  PRECIO             |\n");
-    printf(" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n");
+    printf("¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
 
 	for(i=0;i<tam;i++)
 	{
@@ -134,9 +136,9 @@ int calcularPrecioPromedioDeTipo(eProducto unProducto[], int tam, eTipoProducto 
      int retorno;
      int i;
      int j;
-     int contador[TAM_TIPO] = {};
-     float acumulador[TAM_TIPO] = {};
-     float promedio[TAM_TIPO] = {};
+     eAuxiliar auxiliar[TAM_TIPO];
+
+     inicializarAuxiliarConTipo(auxiliar, tamTip, unTipo);
 
      for(i=0;i<tam;i++)
      {
@@ -146,46 +148,57 @@ int calcularPrecioPromedioDeTipo(eProducto unProducto[], int tam, eTipoProducto 
 
 			if(j != -1)
 			{
-                  contador[j]++;
-                  acumulador[j] += unProducto[i].precio;
+				 auxiliar[j].contador++;
+				 auxiliar[j].acumulador += unProducto[i].precio;
 
 			}
 	    }
 
      }
 
-     retorno = calcularPromedio(unTipo, tamTip, contador, acumulador, promedio);
+     retorno = calcularPromedio(unTipo, tamTip, auxiliar);
 
      return retorno;
 
 }
 
-int calcularPromedio(eTipoProducto unTipo[], int tamTip, int contador[], float acumulador[], float promedio[])
+int calcularPromedio(eTipoProducto unTipo[], int tamTip, eAuxiliar auxiliar[])
 {
 	int retorno;
 	int i;
+
+	for(i=0;i<tamTip;i++)
+	{
+	    if(auxiliar[i].contador != 0)
+	    {
+	    	auxiliar[i].promedio = auxiliar[i].acumulador / auxiliar[i].contador;
+	    }
+	}
+
+	retorno = mostrarPromedioDeTipo(unTipo, tamTip, auxiliar);
+
+	return retorno;
+
+}
+
+int mostrarPromedioDeTipo(eTipoProducto unTipo[], int tamTip, eAuxiliar auxiliar[])
+{
+	int i;
+	int retorno;
 
 	retorno = 0;
 
 	for(i=0;i<tamTip;i++)
 	{
-	          if(contador[i] != 0)
-	          {
-	              promedio[i] = acumulador[i] / contador[i];
-	          }
-	}
+		 if(auxiliar[i].contador != 0)
+		 {
+		     printf("El promedio de %s es: %.2f \n", unTipo[i].descripcionTipo, auxiliar[i].promedio);
 
-    for(i=0;i<tamTip;i++)
-	{
-	   if(contador[i] != 0)
-	   {
-	       printf("El promedio de %s es: %.2f \n", unTipo[i].descripcionTipo, promedio[i]);
-
-	       if(retorno == 0)
-	       {
-	    	  retorno = 1;
-	       }
-	   }
+		     if(retorno == 0)
+		     {
+		    	retorno = 1;
+		     }
+		 }
 	}
 
 	return retorno;

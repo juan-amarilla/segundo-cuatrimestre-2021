@@ -93,14 +93,7 @@ int bajaTipo(eTipoProducto unTipo[], int tamTip, eProducto unProducto[], int tam
 			}
 		}
 
-		for(i=0;i<tam;i++)
-		{
-			if(idTipo == unProducto[i].tipo && buscarEstadoDeTipo(unProducto[i].estado) != VACIO)
-			{
-				unProducto[i].estado = VACIO;
-			}
-
-		}
+		bajaTipoDeCascada(unProducto, tam, idTipo);
 
 	}
 
@@ -111,6 +104,21 @@ int bajaTipo(eTipoProducto unTipo[], int tamTip, eProducto unProducto[], int tam
 	}
 
 	return retorno;
+
+}
+
+void bajaTipoDeCascada(eProducto unProducto[], int tam, int id)
+{
+	int i;
+
+	for(i=0;i<tam;i++)
+	{
+		if(id == unProducto[i].tipo && buscarEstadoDeTipo(unProducto[i].estado) != VACIO)
+		{
+			unProducto[i].estado = VACIO;
+		}
+
+	}
 
 }
 

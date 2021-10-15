@@ -109,7 +109,16 @@ int calcularPrecioPromedioDeTipo(eProducto unProducto[], int tam, eTipoProducto 
 /// @param float acumulador[]
 /// @param float promedio[]
 /// @return retornara 1 si salio bien o 0 si salio mal
-int calcularPromedio(eTipoProducto unTipo[], int tamTip, int contador[], float acumulador[], float promedio[]);
+int calcularPromedio(eTipoProducto unTipo[], int tamTip, eAuxiliar auxiliar[]);
+
+/// @fn int mostrarPromedioDeTipo(eTipoProducto[], int, eAuxiliar[])
+/// @brief su funcion es mostrar el promedio de precio por cada tipo de producto
+///
+/// @param eTipoProducto unTipo[]
+/// @param int tamTip
+/// @param eAuxiliar auxiliar[]
+/// @return retorna 1 si salio bien o 0 si salio mal
+int mostrarPromedioDeTipo(eTipoProducto unTipo[], int tamTip, eAuxiliar auxiliar[]);
 
 /// @fn int mostrarTipoMasBarato(eProducto[], int, eTipoProducto[], int, eNacionalidad[], int, int, float)
 /// @brief listara el mas barato de un tipo de los productos

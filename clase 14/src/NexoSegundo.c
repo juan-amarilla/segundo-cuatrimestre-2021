@@ -289,8 +289,6 @@ int precioPromedioPorNacionalidad(eNacionalidad unaNacionalidad[], int tamNac, e
 	int j;
 	eAuxiliar auxiliar[tamNac];
 
-	retorno = 0;
-
 	inicializarAuxiliarConNacionalidad(auxiliar, tamNac, unaNacionalidad);
 
 	for(i=0;i<tamNac;i++)
@@ -312,24 +310,46 @@ int precioPromedioPorNacionalidad(eNacionalidad unaNacionalidad[], int tamNac, e
 
 	}
 
+	calcularPrecioPromedioPorNacionalidad(auxiliar, tamNac);
+
+	retorno = mostrarPromedioDeNacionalidad(auxiliar, unaNacionalidad, tamNac);
+
+	return retorno;
+
+}
+
+
+void calcularPrecioPromedioPorNacionalidad(eAuxiliar auxiliar[], int tamNac)
+{
+	int i;
+
 	for(i=0;i<tamNac;i++)
 	{
 		if(auxiliar[i].contador > 0)
 		{
-			auxiliar[i].promedio = auxiliar[i].acumulador / auxiliar[i].contador;
+				auxiliar[i].promedio = auxiliar[i].acumulador / auxiliar[i].contador;
 
 		}
 
 	}
 
+}
+
+int mostrarPromedioDeNacionalidad(eAuxiliar auxiliar[], eNacionalidad unaNacionalidad[], int tamNac)
+{
+	int retorno;
+	int i;
+
+	retorno = 0;
+
 	for(i=0;i<tamNac;i++)
 	{
-		if(auxiliar[i].contador > 0)
-		{
-			printf("El promedio de precio de %s es de %.2f \n\n", unaNacionalidad[i].descripcionNacionalidad,auxiliar[i].promedio);
-			retorno = 1;
+	  if(auxiliar[i].contador > 0)
+	  {
+		printf("El promedio de precio de %s es de %.2f \n\n", unaNacionalidad[i].descripcionNacionalidad,auxiliar[i].promedio);
+		retorno = 1;
 
-		}
+	  }
 
 	}
 
