@@ -132,10 +132,20 @@ int mostrarPromedioDeTipo(eTipoProducto unTipo[], int tamTip, eAuxiliar auxiliar
 /// @param int tipo
 /// @param float precioMenor
 /// @return retornara 1 si salio bien o 0 si salio mal
-int mostrarTipoMasBarato(eProducto unProducto[], int tam, eTipoProducto unTipo[], int tamTip, eNacionalidad unaNacionalidad[], int tamNac, int tipo, float precioMenor);
+int mostrarTipoMasBarato(eProducto unProducto[], int tam, eTipoProducto unTipo[], int tamTip, eNacionalidad unaNacionalidad[], int tamNac, float precioMenor, char cadena[]);
 
-/// @fn int mostrarProductosDeNaciolidadEnCuenta(eProducto[], int, eTipoProducto[], int, eNacionalidad[], int, int)
-/// @brief listara los productos de una nacionalidad
+/// @fn float buscarPrecioMenorDeUnTipo(eProducto[], int, eTipoProducto[], char[])
+/// @brief su funcion es buscar el precio menor de un tipo
+///
+/// @param eProducto unProducto[]
+/// @param int tam
+/// @param eTipoProducto unTipo[]
+/// @param char cadena[]
+/// @return retornara el precio menor
+float buscarPrecioMenorDeUnTipo(eProducto unProducto[], int tam, eTipoProducto unTipo[], char cadena[]);
+
+/// @fn int mostrarProductosDeNaciolidadEnCuenta(eProducto[], int, eTipoProducto[], int, eNacionalidad[], int, char[])
+/// @brief mostrara los productos basandose en una nacionalidad determinada
 ///
 /// @param eProducto unProducto[]
 /// @param int tam
@@ -143,12 +153,12 @@ int mostrarTipoMasBarato(eProducto unProducto[], int tam, eTipoProducto unTipo[]
 /// @param int tamTip
 /// @param eNacionalidad unaNacionalidad[]
 /// @param int tamNac
-/// @param int nacionalidad
+/// @param char cadena[]
 /// @return retornara 1 si salio bien o 0 si salio mal
-int mostrarProductosDeNaciolidadEnCuenta(eProducto unProducto[], int tam, eTipoProducto unTipo[], int tamTip, eNacionalidad unaNacionalidad[], int tamNac, int nacionalidad);
+int mostrarProductosDeNaciolidadEnCuenta(eProducto unProducto[], int tam, eTipoProducto unTipo[], int tamTip, eNacionalidad unaNacionalidad[], int tamNac, char cadena[]);
 
-/// @fn int mostrarProductoDeTipoMayorDePrecio(eProducto[], int, eTipoProducto[], int, eNacionalidad[], int, float, int)
-/// @brief listara los productos de un tipo mayor a un precio determinado
+/// @fn int buscarVerificarNacionalidadEnCuenta(eProducto[], int, eTipoProducto[], int, eNacionalidad[], int, char[])
+/// @brief su funcion es buscar la nacionalidad y verificar los estados de cada estructura
 ///
 /// @param eProducto unProducto[]
 /// @param int tam
@@ -156,10 +166,11 @@ int mostrarProductosDeNaciolidadEnCuenta(eProducto unProducto[], int tam, eTipoP
 /// @param int tamTip
 /// @param eNacionalidad unaNacionalidad[]
 /// @param int tamNac
-/// @param float precioMayor
-/// @param int tipo
+/// @param char cadena[]
 /// @return retornara 1 si salio bien o 0 si salio mal
-int mostrarProductoDeTipoMayorDePrecio(eProducto unProducto[], int tam, eTipoProducto unTipo[], int tamTip, eNacionalidad unaNacionalidad[], int tamNac, float precioMayor, int tipo);
+int buscarVerificarNacionalidadEnCuenta(eProducto unProducto[], int tam, eTipoProducto unTipo[], int tamTip, eNacionalidad unaNacionalidad[], int tamNac, char cadena[]);
+
+int mostrarProductoDeTipoMayorDePrecio(eProducto unProducto[], int tam, eTipoProducto unTipo[], int tamTip, eNacionalidad unaNacionalidad[], int tamNac, float precioMayor, char cadena[]);
 
 /// @fn int mostrarTipoMasCaro(eProducto[], int, eTipoProducto[], int, eNacionalidad[], int, float, int)
 /// @brief listara los tipos mas caros

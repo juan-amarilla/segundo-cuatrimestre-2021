@@ -231,30 +231,6 @@ float buscarPrecioMayor(eProducto unProducto[], int tam)
 
 }
 
-float buscarPrecioMenorDeUnTipo(eProducto unProducto[], int tam, int tipo)
-{
-	int i;
-	int flag;
-	float precioMenor;
-
-	flag = 0;
-
-	for(i=0;i<tam;i++)
-	{
-
-	   if(buscarEstado(unProducto[i].estado) == OCUPADO)
-	   {
-	        if((flag == 0 && unProducto[i].tipo == tipo) || (precioMenor > unProducto[i].precio && unProducto[i].tipo == tipo))
-	        {
-	        	   precioMenor = unProducto[i].precio;
-	        	   flag = 1;
-	        }
-	   }
-	}
-
-	return precioMenor;
-}
-
 float buscarPrecioMayorDeUnTipo(eProducto unProducto[], int tam, int tipo)
 {
 	int i;

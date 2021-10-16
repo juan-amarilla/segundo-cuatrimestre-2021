@@ -105,15 +105,6 @@ int buscarEstado(int estado);
 /// @return retorna el precio mayor
 float buscarPrecioMayor(eProducto unProducto[], int tam);
 
-/// @fn float buscarPrecioMenorDeUnTipo(eProducto[], int, int)
-/// @brief busca el precio menor de un tipo
-///
-/// @param eProducto unProducto[]
-/// @param int tam
-/// @param int tipo
-/// @return retorna el precio menor de ese tipo
-float buscarPrecioMenorDeUnTipo(eProducto unProducto[], int tam, int tipo);
-
 /// @fn float buscarPrecioMayorDeUnTipo(eProducto[], int, int)
 /// @brief buscara el precio mayor de un tipo
 ///

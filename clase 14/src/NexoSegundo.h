@@ -146,6 +146,16 @@ int nacionalidadQueTieneMayoresTiposMostrarlo(eNacionalidad unaNacionalidad[], i
 /// @return retorna 1 si salio bien o 0 si salio mal
 int precioPromedioPorNacionalidad(eNacionalidad unaNacionalidad[], int tamNac, eProducto unProducto[], int tam);
 
+/// @fn void acumContadorPorNacionalidad(eNacionalidad[], int, eProducto[], int, eAuxiliar[])
+/// @brief acumulara precio y contara por nacionalidad
+///
+/// @param eNacionalidad unaNacionalidad[]
+/// @param int tamNac
+/// @param eProducto unProducto[]
+/// @param int tam
+/// @param eAuxiliar auxiliar[]
+void acumContadorPorNacionalidad(eNacionalidad unaNacionalidad[], int tamNac, eProducto unProducto[], int tam, eAuxiliar auxiliar[]);
+
 /// @fn void calcularPrecioPromedioPorNacionalidad(eAuxiliar[], int)
 /// @brief su funcion es calcular el promedio de cada nacionalidad
 ///

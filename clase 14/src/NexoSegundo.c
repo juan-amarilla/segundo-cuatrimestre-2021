@@ -285,11 +285,24 @@ int nacionalidadQueTieneMayoresTiposMostrarlo(eNacionalidad unaNacionalidad[], i
 int precioPromedioPorNacionalidad(eNacionalidad unaNacionalidad[], int tamNac, eProducto unProducto[], int tam)
 {
 	int retorno;
-	int i;
-	int j;
 	eAuxiliar auxiliar[tamNac];
 
 	inicializarAuxiliarConNacionalidad(auxiliar, tamNac, unaNacionalidad);
+
+	acumContadorPorNacionalidad(unaNacionalidad, tamNac, unProducto, tam, auxiliar);
+
+	calcularPrecioPromedioPorNacionalidad(auxiliar, tamNac);
+
+	retorno = mostrarPromedioDeNacionalidad(auxiliar, unaNacionalidad, tamNac);
+
+	return retorno;
+
+}
+
+void acumContadorPorNacionalidad(eNacionalidad unaNacionalidad[], int tamNac, eProducto unProducto[], int tam, eAuxiliar auxiliar[])
+{
+	int i;
+	int j;
 
 	for(i=0;i<tamNac;i++)
 	{
@@ -310,14 +323,7 @@ int precioPromedioPorNacionalidad(eNacionalidad unaNacionalidad[], int tamNac, e
 
 	}
 
-	calcularPrecioPromedioPorNacionalidad(auxiliar, tamNac);
-
-	retorno = mostrarPromedioDeNacionalidad(auxiliar, unaNacionalidad, tamNac);
-
-	return retorno;
-
 }
-
 
 void calcularPrecioPromedioPorNacionalidad(eAuxiliar auxiliar[], int tamNac)
 {
