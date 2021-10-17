@@ -2,6 +2,48 @@
 
 #include "Producto.h"
 
+int verificarProductoDeTipo(eProducto unProducto[], int tam, int id)
+{
+	int retorno;
+	int i;
+
+	retorno = -1;
+
+	for(i=0;i<tam;i++)
+	{
+		if(unProducto[i].tipo == id)
+		{
+			retorno = i;
+			break;
+		}
+
+	}
+
+    return retorno;
+
+}
+
+int verificarProductoDeNacionalidad(eProducto unProducto[], int tam, int id)
+{
+	int retorno;
+	int i;
+
+	retorno = -1;
+
+	for(i=0;i<tam;i++)
+	{
+		if(unProducto[i].nacionalidad == id)
+		{
+			retorno = i;
+			break;
+		}
+
+	}
+
+    return retorno;
+
+}
+
 int modificarProducto(eProducto unProducto[], int tam, char cadena[])
 {
 	int retorno;
@@ -229,28 +271,4 @@ float buscarPrecioMayor(eProducto unProducto[], int tam)
 
     return precioMayor;
 
-}
-
-float buscarPrecioMayorDeUnTipo(eProducto unProducto[], int tam, int tipo)
-{
-	int i;
-	int flag;
-	float precioMayor;
-
-	flag = 0;
-
-	for(i=0;i<tam;i++)
-	{
-
-	   if(buscarEstado(unProducto[i].estado) == OCUPADO)
-	   {
-	        if((flag == 0 && unProducto[i].tipo == tipo) || (precioMayor < unProducto[i].precio && unProducto[i].tipo == tipo))
-	        {
-	        	precioMayor = unProducto[i].precio;
-	        	flag = 1;
-	        }
-	   }
-	}
-
-	return precioMayor;
 }

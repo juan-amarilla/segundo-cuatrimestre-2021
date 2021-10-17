@@ -36,13 +36,16 @@ int mostrarVariosProductosConSuFabricante(eProducto unProducto[], int tam, eTipo
 	{
 		j = verificarTipo(unTipo, tamTip, unProducto[i].tipo);
 		k = verificarNacionalidad(unaNacionalidad, tamNac, unProducto[i].nacionalidad);
-        r = verificarFabricante(unFabricante, tamFabr, unTipo[i].idFabricante);
+        r = verificarFabricante(unFabricante, tamFabr, unTipo[j].idFabricante);
 
 		if(buscarEstado(unProducto[i].estado) == OCUPADO)
         {
 		   if(j != -1 && k != -1 && r != -1)
 		   {
-			   retorno = mostrarProductoConSuFabricante(unProducto[i], unTipo[j], unaNacionalidad[k], unFabricante[r]);
+			   if(buscarEstado(unTipo[j].estado) == OCUPADO && buscarEstado(unaNacionalidad[k].estado) == OCUPADO)
+			   {
+				  retorno = mostrarProductoConSuFabricante(unProducto[i], unTipo[j], unaNacionalidad[k], unFabricante[r]);
+			   }
 		   }
 
 		}
@@ -163,30 +166,31 @@ int productosOrdenadosPorNacionalidadParte2(eProducto unProducto[], int tam, eNa
 	int j;
 	int k;
 
-	for(i=0;i<tamNac-1;i++)
+	for(i=0;i<tam-1;i++)
 	{
-		for(r=i+1;r<tamNac;r++)
+		for(j=i+1;j<tam;j++)
 		{
-			for(j=0;j<tam-1;j++)
+			k = verificarNacionalidad(unaNacionalidad, tamNac, unProducto[i].nacionalidad);
+			r = verificarNacionalidad(unaNacionalidad, tamNac, unProducto[j].nacionalidad);
+
+			if(r != -1 && k != -1)
 			{
-				for(k=j+1;k<tam;k++)
-				{
-					if(strcmp(unaNacionalidad[i].descripcionNacionalidad, unaNacionalidad[r].descripcionNacionalidad) > 0)
-					{
-						if(unProducto[j].nacionalidad == unaNacionalidad[i].idNacionalidad)
-						{
-								if(unProducto[k].nacionalidad == unaNacionalidad[r].idNacionalidad)
-								{
-											auxiliar = unProducto[j];
-											unProducto[j] = unProducto[k];
-											unProducto[k] = auxiliar;
-											retorno = 1;
-								}
-						}
+			  if(buscarEstado(unaNacionalidad[k].estado) == OCUPADO && buscarEstado(unaNacionalidad[r].estado) == OCUPADO)
+			  {
+				  if(buscarEstado(unProducto[i].estado) == OCUPADO && buscarEstado(unProducto[j].estado) == OCUPADO)
+				  {
+					  if(strcmp(unaNacionalidad[k].descripcionNacionalidad, unaNacionalidad[r].descripcionNacionalidad) > 0)
+					  {
+						  auxiliar = unProducto[i];
+						  unProducto[i] = unProducto[j];
+						  unProducto[j] = auxiliar;
+						  retorno = 1;
 
-					}
+					  }
 
-				}
+				  }
+
+			  }
 
 			}
 

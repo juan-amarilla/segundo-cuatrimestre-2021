@@ -24,6 +24,24 @@ typedef struct
 
 }eProducto;
 
+/// @fn int verificarProductoDeTipo(eProducto[], int, int)
+/// @brief su funcion es verificar que producto es
+///
+/// @param eProducto unProducto[]
+/// @param int tam
+/// @param int id
+/// @return retorna la posicion si esta bien o -1 si esta mal
+int verificarProductoDeTipo(eProducto unProducto[], int tam, int id);
+
+/// @fn int verificarProductoDeNacionalidad(eProducto[], int, int)
+/// @brief su funcion es verificar que producto es
+///
+/// @param eProducto unProducto[]
+/// @param int tam
+/// @param int id
+/// @return retorna la posicion si esta bien o -1 si esta mal
+int verificarProductoDeNacionalidad(eProducto unProducto[], int tam, int id);
+
 /// @fn eProducto pedirProducto(eProducto, char[])
 /// @brief su funcion es ingresar los datos del producto
 ///
@@ -104,14 +122,5 @@ int buscarEstado(int estado);
 /// @param int tam
 /// @return retorna el precio mayor
 float buscarPrecioMayor(eProducto unProducto[], int tam);
-
-/// @fn float buscarPrecioMayorDeUnTipo(eProducto[], int, int)
-/// @brief buscara el precio mayor de un tipo
-///
-/// @param eProducto unProducto[]
-/// @param int tam
-/// @param int tipo
-/// @return retorna el precio mayor
-float buscarPrecioMayorDeUnTipo(eProducto unProducto[], int tam, int tipo);
 
 #endif /* PRODUCTO_H_ */

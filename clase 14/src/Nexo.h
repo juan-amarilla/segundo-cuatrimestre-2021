@@ -170,10 +170,8 @@ int mostrarProductosDeNaciolidadEnCuenta(eProducto unProducto[], int tam, eTipoP
 /// @return retornara 1 si salio bien o 0 si salio mal
 int buscarVerificarNacionalidadEnCuenta(eProducto unProducto[], int tam, eTipoProducto unTipo[], int tamTip, eNacionalidad unaNacionalidad[], int tamNac, char cadena[]);
 
-int mostrarProductoDeTipoMayorDePrecio(eProducto unProducto[], int tam, eTipoProducto unTipo[], int tamTip, eNacionalidad unaNacionalidad[], int tamNac, float precioMayor, char cadena[]);
-
-/// @fn int mostrarTipoMasCaro(eProducto[], int, eTipoProducto[], int, eNacionalidad[], int, float, int)
-/// @brief listara los tipos mas caros
+/// @fn int mostrarProductoDeTipoMayorDePrecio(eProducto[], int, eTipoProducto[], int, eNacionalidad[], int, float, char[])
+/// @brief su funcion es mostrar el producto de un tipo de que es mayor a un precio
 ///
 /// @param eProducto unProducto[]
 /// @param int tam
@@ -182,9 +180,62 @@ int mostrarProductoDeTipoMayorDePrecio(eProducto unProducto[], int tam, eTipoPro
 /// @param eNacionalidad unaNacionalidad[]
 /// @param int tamNac
 /// @param float precioMayor
-/// @param int tipo
+/// @param char cadena[]
+/// @return retorna 1 si salio bien o 0 si salio mal
+int mostrarProductoDeTipoMayorDePrecio(eProducto unProducto[], int tam, eTipoProducto unTipo[], int tamTip, eNacionalidad unaNacionalidad[], int tamNac, float precioMayor, char cadena[]);
+
+/// @fn int calcularTipoMayorDePrecio(eProducto[], int, eTipoProducto[], int, eNacionalidad[], int, float, char[])
+/// @brief su funcion es calcular el tipo mayor de precio
+///
+/// @param eProducto unProducto[]
+/// @param int tam
+/// @param eTipoProducto unTipo[]
+/// @param int tamTip
+/// @param eNacionalidad unaNacionalidad[]
+/// @param int tamNac
+/// @param float precioMayor
+/// @param char cadena[]
+/// @return retorna 1 si salio bien o 0 si salio mal
+int calcularTipoMayorDePrecio(eProducto unProducto[], int tam, eTipoProducto unTipo[], int tamTip, eNacionalidad unaNacionalidad[], int tamNac, float precioMayor, char cadena[]);
+
+/// @fn int mostrarTipoMasCaro(eProducto[], int, eTipoProducto[], int, eNacionalidad[], int, float, char[])
+/// @brief mostrara el tipo mas caro
+///
+/// @param eProducto unProducto[]
+/// @param int tam
+/// @param eTipoProducto unTipo[]
+/// @param int tamTip
+/// @param eNacionalidad unaNacionalidad[]
+/// @param int tamNac
+/// @param float precioMayor
+/// @param char cadena[]
+/// @return retorna 1 si salio bien o 0 si salio mal
+int mostrarTipoMasCaro(eProducto unProducto[], int tam, eTipoProducto unTipo[], int tamTip, eNacionalidad unaNacionalidad[], int tamNac, float precioMayor, char cadena[]);
+
+/// @fn float buscarPrecioMayorDeUnTipo(eProducto[], int, eTipoProducto[], int, char[])
+/// @brief su funcion es buscar el precio mayor de un tipo
+///
+/// @param eProducto unProducto[]
+/// @param int tam
+/// @param eTipoProducto listaTipo[]
+/// @param int tamTip
+/// @param char cadena[]
+/// @return retornara el precio
+float buscarPrecioMayorDeUnTipo(eProducto unProducto[], int tam, eTipoProducto listaTipo[], int tamTip, char cadena[]);
+
+/// @fn int mostrarUnProductoPorPrecioDeTipo(eProducto[], int, eTipoProducto[], int, float, eNacionalidad[], int, char[])
+/// @brief su funcion es mostrar un producto por precio basandose de un tipo
+///
+/// @param eProducto unProducto[]
+/// @param int tam
+/// @param eTipoProducto unTipo[]
+/// @param int tamTip
+/// @param float precio
+/// @param eNacionalidad unaNacionalidad[]
+/// @param int tamNac
+/// @param char cadena[]
 /// @return retornara 1 si salio bien o 0 si salio mal
-int mostrarTipoMasCaro(eProducto unProducto[], int tam, eTipoProducto unTipo[], int tamTip, eNacionalidad unaNacionalidad[], int tamNac, float precioMayor, int tipo);
+int mostrarUnProductoPorPrecioDeTipo(eProducto unProducto[], int tam, eTipoProducto unTipo[], int tamTip, float precio, eNacionalidad unaNacionalidad[], int tamNac, char cadena[]);
 
 /// @fn int mostrarProductosPorTipo(eTipoProducto[], int, eProducto[], int, eNacionalidad[], int)
 /// @brief por cada tipo mostrara los productos que tengan ese tipo

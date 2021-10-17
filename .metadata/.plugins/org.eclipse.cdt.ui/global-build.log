@@ -1,70 +1,76 @@
-11:21:31 **** Incremental Build of configuration Debug for project clase 14 ****
+11:05:57 **** Incremental Build of configuration Debug for project clase 14 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Fabricante.o" "..\\src\\Fabricante.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nacionalidad.o" "..\\src\\Nacionalidad.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoSegundo.o" "..\\src\\NexoSegundo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TipoProducto.o" "..\\src\\TipoProducto.c" 
+gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
+11:06:55 **** Incremental Build of configuration Debug for project clase 14 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
-..\src\Nexo.c: In function 'mostrarProductosDeNaciolidadEnCuenta':
-..\src\Nexo.c:266:6: warning: unused variable 'k' [-Wunused-variable]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Fabricante.o" "..\\src\\Fabricante.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TipoProducto.o" "..\\src\\TipoProducto.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoSegundo.o" "..\\src\\NexoSegundo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nacionalidad.o" "..\\src\\Nacionalidad.c" 
+gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
+Info: Nothing to build for clase 14
+Info: Nothing to build for clase 14
+11:11:03 **** Incremental Build of configuration Debug for project clase 14 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
+gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
+11:11:35 **** Incremental Build of configuration Debug for project clase 14 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
+gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
+Info: Nothing to build for clase 14
+11:13:11 **** Incremental Build of configuration Debug for project clase 14 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoSegundo.o" "..\\src\\NexoSegundo.c" 
+..\src\NexoSegundo.c: In function 'productosOrdenadosPorNacionalidadParte2':
+..\src\NexoSegundo.c:164:6: warning: unused variable 'k' [-Wunused-variable]
   int k;
       ^
+..\src\NexoSegundo.c:163:6: warning: unused variable 'j' [-Wunused-variable]
+  int j;
+      ^
+..\src\NexoSegundo.c:162:6: warning: unused variable 'r' [-Wunused-variable]
+  int r;
+      ^
+..\src\NexoSegundo.c:161:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+..\src\NexoSegundo.c:197:9: warning: 'retorno' is used uninitialized in this function [-Wuninitialized]
+  return retorno;
+         ^~~~~~~
 gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-11:24:21 **** Incremental Build of configuration Debug for project clase 14 ****
+11:22:22 **** Incremental Build of configuration Debug for project clase 14 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-11:24:45 **** Incremental Build of configuration Debug for project clase 14 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-Info: Nothing to build for clase 14
-11:25:17 **** Incremental Build of configuration Debug for project clase 14 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-11:26:49 **** Incremental Build of configuration Debug for project clase 14 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoSegundo.o" "..\\src\\NexoSegundo.c" 
 gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-11:31:06 **** Incremental Build of configuration Debug for project clase 14 ****
+Info: Nothing to build for clase 14
+Info: Nothing to build for clase 14
+11:25:05 **** Incremental Build of configuration Debug for project clase 14 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoSegundo.o" "..\\src\\NexoSegundo.c" 
 gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
 Info: Nothing to build for clase 14
-11:41:28 **** Incremental Build of configuration Debug for project clase 14 ****
+11:28:40 **** Incremental Build of configuration Debug for project clase 14 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoSegundo.o" "..\\src\\NexoSegundo.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
 gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-11:41:50 **** Incremental Build of configuration Debug for project clase 14 ****
+11:30:19 **** Incremental Build of configuration Debug for project clase 14 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoSegundo.o" "..\\src\\NexoSegundo.c" 
+gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
+11:32:06 **** Incremental Build of configuration Debug for project clase 14 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-11:42:14 **** Incremental Build of configuration Debug for project clase 14 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-11:43:00 **** Incremental Build of configuration Debug for project clase 14 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-11:45:30 **** Incremental Build of configuration Debug for project clase 14 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-Info: Nothing to build for clase 14
-11:47:27 **** Incremental Build of configuration Debug for project clase 14 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-11:47:58 **** Incremental Build of configuration Debug for project clase 14 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-11:48:11 **** Incremental Build of configuration Debug for project clase 14 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
 gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
 Info: Nothing to build for clase 14

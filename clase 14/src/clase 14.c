@@ -113,9 +113,9 @@ sido fabricadas por un fabricante que ingresó el usuario (validar).
 int main(void)
 {
 	eProducto listaProducto[TAM]= {{100,"arg",2, 1000,140,OCUPADO},
-			                        {200,"br",1, 1002,705,OCUPADO},
+			                        {200,"br",3, 1003,705,OCUPADO},
 			                        {300,"ark",3, 1000,700,OCUPADO},
-			                        {400,"yy",2, 1002,700,OCUPADO}};
+			                        {400,"yy",2, 1003,705,OCUPADO}};
 
 	eTipoProducto listaTipo[TAM_TIPO]={ {1000, "Iphone",1,OCUPADO},
 			                            {1001, "Ipad",2,OCUPADO},
@@ -216,13 +216,12 @@ int main(void)
 		 break;
 
 		 case 14:
-	     //ESTA MAL
-		 estado = mostrarProductoDeTipoMayorDePrecio(listaProducto, TAM, listaTipo, TAM_TIPO, listaNacionalidad, TAM_NACIONALIDAD, 700, "MAC");
+		 estado = mostrarProductoDeTipoMayorDePrecio(listaProducto, TAM, listaTipo, TAM_TIPO, listaNacionalidad, TAM_NACIONALIDAD, 700, "Mac");
 		 mensajeEstado(estado, "listado con exito. \n", "listado sin exito. \n");
 		 break;
 
 		 case 15:
-		 estado = mostrarTipoMasCaro(listaProducto, TAM, listaTipo, TAM_TIPO, listaNacionalidad, TAM_NACIONALIDAD, precioMayor, 1003);
+		 estado = mostrarTipoMasCaro(listaProducto, TAM, listaTipo, TAM_TIPO, listaNacionalidad, TAM_NACIONALIDAD, precioMayor, "Accesorios");
 		 mensajeEstado(estado, "listado con exito. \n", "listado sin exito. \n");
 		 break;
 
@@ -246,7 +245,6 @@ int main(void)
          break;
 
 		 case 20:
-		 //ESTA MAL
 		 estado = productosOrdenadosPorNacionalidad(listaProducto, TAM, listaNacionalidad, TAM_NACIONALIDAD);
 		 mensajeEstado(estado, "Ordenamiento con exito. \n", "Ordenamiento sin exito. \n");
 	     break;

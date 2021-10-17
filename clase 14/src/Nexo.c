@@ -74,9 +74,9 @@ void mostrarVariosProductos(eProducto unProducto[], int tam, eTipoProducto unTip
 
 		if(buscarEstado(unProducto[i].estado) == OCUPADO)
         {
-		   if(buscarEstado(unTipo[i].estado) == OCUPADO)
+		   if(buscarEstado(unTipo[j].estado) == OCUPADO)
 		   {
-			   if(buscarEstado(unaNacionalidad[i].estado) == OCUPADO)
+			   if(buscarEstado(unaNacionalidad[k].estado) == OCUPADO)
 			   {
 				   if(j != -1 && k != -1)
 				   {
@@ -322,58 +322,144 @@ int buscarVerificarNacionalidadEnCuenta(eProducto unProducto[], int tam, eTipoPr
 
 int mostrarProductoDeTipoMayorDePrecio(eProducto unProducto[], int tam, eTipoProducto unTipo[], int tamTip, eNacionalidad unaNacionalidad[], int tamNac, float precioMayor, char cadena[])
 {
-	int i;
-	int j;
-	int k;
 	int retorno;
-
-    retorno = 0;
 
     printf(" ________________________________________________________________________________________\n");
     printf("|ID         |DESCRIPCION     |NACIONALIDAD        |TIPO           |  PRECIO             |\n");
     printf(" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n");
 
+    retorno = calcularTipoMayorDePrecio(unProducto, tam, unTipo, tamTip, unaNacionalidad, tamNac, precioMayor, cadena);
+
+	return retorno;
+
+}
+
+int calcularTipoMayorDePrecio(eProducto unProducto[], int tam, eTipoProducto unTipo[], int tamTip, eNacionalidad unaNacionalidad[], int tamNac, float precioMayor, char cadena[])
+{
+	int retorno;
+	int i;
+	int j;
+	int k;
+
+	retorno = 0;
+
 	for(i=0;i<tam;i++)
 	{
-		if(buscarEstado(unProducto[i].estado) == OCUPADO)
-		{
-			j = verificarTipo(unTipo, tamTip, unProducto[i].tipo);
-			k = verificarNacionalidad(unaNacionalidad, tamNac, unProducto[i].nacionalidad);
+	    j = verificarTipo(unTipo, tamTip, unProducto[i].tipo);
+	    k = verificarNacionalidad(unaNacionalidad, tamNac, unProducto[i].nacionalidad);
 
-			if(buscarEstado(unTipo[j].estado) == OCUPADO)
-			{
-				if(buscarEstado(unaNacionalidad[k].estado) == OCUPADO)
-				{
-					if(strcmp(unTipo[j].descripcionTipo, cadena) == 0 && unProducto[i].precio > precioMayor)
-					{
-						mostrarProducto(unProducto[i], unTipo[j], unaNacionalidad[k]);
-						retorno = 1;
-					}
+	    if(strcmp(unTipo[j].descripcionTipo, cadena) == 0)
+	    {
+	    	if(j != -1 && k != -1)
+	    	{
+	    		if(buscarEstado(unTipo[j].estado) == OCUPADO)
+	    		{
+	    			if(buscarEstado(unaNacionalidad[k].estado) == OCUPADO)
+	    			{
+	    				if(unProducto[i].precio > precioMayor)
+	    				{
+	    						mostrarProducto(unProducto[i], unTipo[j], unaNacionalidad[k]);
+	    						retorno = 1;
 
+	    				}
 
-				}
+	    			}
 
-			}
+	    		}
+
+	    	}
 
 	    }
+
 	}
 
 	return retorno;
 
 }
 
-int mostrarTipoMasCaro(eProducto unProducto[], int tam, eTipoProducto unTipo[], int tamTip, eNacionalidad unaNacionalidad[], int tamNac, float precioMayor, int tipo)
+int mostrarTipoMasCaro(eProducto unProducto[], int tam, eTipoProducto unTipo[], int tamTip, eNacionalidad unaNacionalidad[], int tamNac, float precioMayor, char cadena[])
 {
 	int retorno;
 
 	retorno = 0;
 
-	precioMayor = buscarPrecioMayorDeUnTipo(unProducto, tam, tipo);
+	precioMayor = buscarPrecioMayorDeUnTipo(unProducto, tam, unTipo, tamTip, cadena);
 
-	retorno = mostrarUnProductoPorPrecio(unProducto, tam, unTipo, tamTip, precioMayor, unaNacionalidad, tamNac);
+	retorno = mostrarUnProductoPorPrecioDeTipo(unProducto, tam, unTipo, tamTip, precioMayor, unaNacionalidad, tamNac, cadena);
 
 	return retorno;
 
+}
+
+float buscarPrecioMayorDeUnTipo(eProducto unProducto[], int tam, eTipoProducto listaTipo[], int tamTip, char cadena[])
+{
+	int i;
+	int j;
+	int flag;
+	float precioMayor;
+
+	flag = 0;
+
+	for(i=0;i<tam;i++)
+	{
+       j = verificarTipo(listaTipo, tamTip, unProducto[i].tipo);
+
+	   if(buscarEstado(unProducto[i].estado) == OCUPADO && j != -1)
+	   {
+	        if((flag == 0 && strcmp(listaTipo[j].descripcionTipo, cadena) == 0) || (precioMayor < unProducto[i].precio && strcmp(listaTipo[j].descripcionTipo, cadena) == 0))
+	        {
+	        	precioMayor = unProducto[i].precio;
+	        	flag = 1;
+	        }
+	   }
+	}
+
+	return precioMayor;
+}
+
+int mostrarUnProductoPorPrecioDeTipo(eProducto unProducto[], int tam, eTipoProducto unTipo[], int tamTip, float precio, eNacionalidad unaNacionalidad[], int tamNac, char cadena[])
+{
+	int retorno;
+	int i;
+	int j;
+	int k;
+
+	retorno = 0;
+
+	printf(" ________________________________________________________________________________________\n");
+	printf("|ID         |DESCRIPCION     |NACIONALIDAD        |TIPO           |  PRECIO             |\n");
+	printf(" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n");
+
+	for(i=0;i<tam;i++)
+	{
+		if(buscarEstado(unProducto[i].estado) == OCUPADO)
+		{
+			if(buscarEstado(unTipo[i].estado) == OCUPADO)
+			{
+				if(buscarEstado(unaNacionalidad[i].estado) == OCUPADO)
+				{
+					j = verificarTipo(unTipo, tamTip, unProducto[i].tipo);
+					k = verificarNacionalidad(unaNacionalidad, tamNac, unProducto[i].nacionalidad);
+
+					if(j != -1 && k != -1)
+					{
+						if(precio == unProducto[i].precio && strcmp(unTipo[j].descripcionTipo, cadena) == 0)
+						{
+							mostrarProducto(unProducto[i], unTipo[j], unaNacionalidad[k]);
+							retorno = 1;
+
+						}
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+    return retorno;
 }
 
 int mostrarProductosPorTipo(eTipoProducto unTipo[], int tamTip, eProducto unProducto[], int tam, eNacionalidad unaNacionalidad[], int tamNac)
