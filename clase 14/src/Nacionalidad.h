@@ -32,22 +32,24 @@ int verificarNacionalidad(eNacionalidad unaNacionalidad[], int tam, int id);
 /// @return retorna 1 si salio bien o 0 si salio mal
 int buscarEstadoDeNacionalidad(int estado);
 
-/// @fn int altaNacionalidad(eNacionalidad[], int, char[])
+/// @fn int altaNacionalidad(eNacionalidad[], int, char[], int)
 /// @brief su funcion es dar de alta la nacionalidad
 ///
 /// @param eNacionalidad unaNacionalidad[]
 /// @param int tamNac
 /// @param char cadena[]
+/// @param int id
 /// @return retorna 1 si salio bien o 0 si salio mal
-int altaNacionalidad(eNacionalidad unaNacionalidad[], int tamNac, char cadena[]);
+int altaNacionalidad(eNacionalidad unaNacionalidad[], int tamNac, char cadena[], int id);
 
-/// @fn eNacionalidad pedirNacionalidad(eNacionalidad, char[])
+/// @fn eNacionalidad pedirNacionalidad(eNacionalidad, char[], int)
 /// @brief su funcion es darle el usuario el poder ingresar datos de nacionalidad
 ///
 /// @param eNacionalidad unaNacionalidad[]
 /// @param char cadena[]
+/// @param int id
 /// @return retorna los datos ingresados
-eNacionalidad pedirNacionalidad(eNacionalidad unaNacionalidad, char cadena[]);
+eNacionalidad pedirNacionalidad(eNacionalidad unaNacionalidad, char cadena[], int id);
 
 /// @fn int bajaNacionalidad(eNacionalidad[], int, eProducto[], int, char[])
 /// @brief su funcion es dar de baja la nacionalidad y los productos que dependan de esta

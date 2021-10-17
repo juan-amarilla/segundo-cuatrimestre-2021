@@ -34,22 +34,40 @@ int verificarTipo(eTipoProducto unTipo[], int tam, int id);
 /// @return retorna 1 si salio bien o 0 si salio mal
 int buscarEstadoDeTipo(int estado);
 
-/// @fn int altaTipo(eTipoProducto[], int, char[])
+/// @fn void menuTipo(eTipoProducto[], int)
+/// @brief su funcion es imprimir un menu de tipo
+///
+/// @param eTipoProducto listaTipo[]
+/// @param int tamTip
+void menuTipo(eTipoProducto listaTipo[], int tamTip);
+
+/// @fn int validarTipoId(eTipoProducto[], int, int)
+/// @brief su funcion es validar el tipo id
+///
+/// @param eTipoProducto listaTipo[]
+/// @param int tamTip
+/// @param int elegir
+/// @return retorna la id tipo
+int validarTipoId(eTipoProducto listaTipo[], int tamTip, int elegir);
+
+/// @fn int altaTipo(eTipoProducto[], int, char[], int)
 /// @brief su funcion es dar de alta un tipo
 ///
 /// @param eTipoProducto unTipo[]
 /// @param int tamTip
 /// @param char cadena[]
+/// @param int id
 /// @return retorna 1 si salio bien o 0 si salio mal
-int altaTipo(eTipoProducto unTipo[], int tamTip, char cadena[]);
+int altaTipo(eTipoProducto unTipo[], int tamTip, char cadena[], int id);
 
-/// @fn eTipoProducto pedirTipo(eTipoProducto, char[])
-/// @brief su funcion es que el usuario pueda ingresar los datos necesarios del tipo
+/// @fn eTipoProducto pedirTipo(eTipoProducto, char[], int)
+/// @brief su funcion es que el usuario pueda ingresar los datos de tipo
 ///
-/// @param eTipoProducto unTipo[]
+/// @param eTipoProducto unTipo
 /// @param char cadena[]
+/// @param int id
 /// @return retorna los datos ingresados
-eTipoProducto pedirTipo(eTipoProducto unTipo, char cadena[]);
+eTipoProducto pedirTipo(eTipoProducto unTipo, char cadena[], int id);
 
 /// @fn int bajaTipo(eTipoProducto[], int, eProducto[], int, char[])
 /// @brief su funcion es dar de baja un tipo y los productos que dependan de esta

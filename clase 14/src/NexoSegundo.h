@@ -172,4 +172,26 @@ void calcularPrecioPromedioPorNacionalidad(eAuxiliar auxiliar[], int tamNac);
 /// @return retorna 1 si salio bien o 0 si salio mal
 int mostrarPromedioDeNacionalidad(eAuxiliar auxiliar[], eNacionalidad unaNacionalidad[], int tamNac);
 
+/// @fn int modificarProducto(eProducto[], int, eTipoProducto[], int, char[])
+/// @brief su funcion es modificar producto
+///
+/// @param eProducto unProducto[]
+/// @param int tam
+/// @param eTipoProducto listaTipo[]
+/// @param int tamTip
+/// @param char cadena[]
+/// @return retorna 1 si salio bien o 0 si salio mal
+int modificarProducto(eProducto unProducto[], int tam, eTipoProducto listaTipo[], int tamTip, char cadena[]);
+
+/// @fn int modificarUnDato(eProducto[], int, eTipoProducto[], int, char[])
+/// @brief su funcion es modificar un dato
+///
+/// @param eProducto unProducto[]
+/// @param int tam
+/// @param eTipoProducto listaTipo[]
+/// @param int tamTip
+/// @param char cadena[]
+/// @return retorna 1 si salio bien o 0 si salio mal
+int modificarUnDato(eProducto unProducto[], int tam, eTipoProducto listaTipo[], int tamTip, char cadena[]);
+
 #endif /* NEXOSEGUNDO_H_ */

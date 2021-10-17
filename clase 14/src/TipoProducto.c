@@ -37,7 +37,54 @@ int buscarEstadoDeTipo(int estado)
 	return retorno;
 }
 
-int altaTipo(eTipoProducto unTipo[], int tamTip, char cadena[])
+void menuTipo(eTipoProducto listaTipo[], int tamTip)
+{
+	int i;
+
+	for(i=0;i<tamTip;i++)
+	{
+		if(buscarEstadoDeTipo(listaTipo[i].estado) == OCUPADO)
+		{
+			printf("%d-%s. \n", (i+1), listaTipo[i].descripcionTipo);
+		}
+
+	}
+
+}
+
+int validarTipoId(eTipoProducto listaTipo[], int tamTip, int elegir)
+{
+	int i;
+	int estado;
+	char cadena[51];
+
+	estado = 0;
+
+	while(estado == 0)
+	{
+		for(i=0;i<tamTip;i++)
+		{
+			if(i == (elegir - 1))
+			{
+				elegir = listaTipo[i].idTipo;
+				estado = 1;
+			}
+
+		}
+
+		if(estado == 0)
+		{
+			pedirEnteroValidado(cadena, "Error: ingrese tipo en forma numerica valido: \n", &elegir);
+
+		}
+
+	}
+
+	return elegir;
+
+}
+
+int altaTipo(eTipoProducto unTipo[], int tamTip, char cadena[], int id)
 {
 	int i;
 	int retorno;
@@ -48,7 +95,7 @@ int altaTipo(eTipoProducto unTipo[], int tamTip, char cadena[])
 	{
 		if(buscarEstadoDeTipo(unTipo[i].estado) != OCUPADO)
 		{
-			unTipo[i] = pedirTipo(unTipo[i], cadena);
+			unTipo[i] = pedirTipo(unTipo[i], cadena, id);
 			retorno = 1;
 			break;
 		}
@@ -57,9 +104,9 @@ int altaTipo(eTipoProducto unTipo[], int tamTip, char cadena[])
 	return retorno;
 }
 
-eTipoProducto pedirTipo(eTipoProducto unTipo, char cadena[])
+eTipoProducto pedirTipo(eTipoProducto unTipo, char cadena[], int id)
 {
-	pedirEnteroValidado(cadena, "Ingrese ID de tipo: \n", &unTipo.idTipo);
+	unTipo.idTipo = id;
 	pedirEnteroValidado(cadena, "Ingrese ID de fabricante: \n", &unTipo.idFabricante);
 	pedirCadenaValidado(cadena, "Ingrese Descripcion: \n", unTipo.descripcionTipo);
 	unTipo.estado = OCUPADO;

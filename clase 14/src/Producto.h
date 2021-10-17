@@ -42,22 +42,24 @@ int verificarProductoDeTipo(eProducto unProducto[], int tam, int id);
 /// @return retorna la posicion si esta bien o -1 si esta mal
 int verificarProductoDeNacionalidad(eProducto unProducto[], int tam, int id);
 
-/// @fn eProducto pedirProducto(eProducto, char[])
-/// @brief su funcion es ingresar los datos del producto
+/// @fn eProducto pedirProducto(eProducto, char[], int)
+/// @brief su funcion es que el usuario pueda ingresar los datos
 ///
 /// @param eProducto unProducto
 /// @param char cadena[]
+/// @param int id
 /// @return retorna los datos ingresados
-eProducto pedirProducto(eProducto unProducto, char cadena[]);
+eProducto pedirProducto(eProducto unProducto, char cadena[], int id);
 
-/// @fn int altaProducto(eProducto[], int, char[])
+/// @fn int altaProducto(eProducto[], int, char[], int)
 /// @brief su funcion es dar de alta un producto
 ///
 /// @param eProducto unProducto[]
 /// @param int tam
 /// @param char cadena[]
+/// @param int id
 /// @return retorna 1 si salio bien o 0 si salio mal
-int altaProducto(eProducto unProducto[], int tam, char cadena[]);
+int altaProducto(eProducto unProducto[], int tam, char cadena[], int id);
 
 /// @fn void inicializarProductos(eProducto[], int)
 /// @brief su funcion es inicializar los estados de los productos en 0
@@ -75,23 +77,12 @@ void inicializarProductos(eProducto unProducto[], int tam);
 /// @return retorna 1 si salio bien o 0 si salio mal
 int bajaProducto(eProducto unProducto[], int tam, char cadena[]);
 
-/// @fn int modificarProducto(eProducto[], int, char[])
-/// @brief su funcion es modificar el precio o el tipo
+/// @fn void menuIdProducto(eProducto[], int)
+/// @brief su funcion es mostrar un menu de id de productos
 ///
-/// @param eProducto unProducto[]
+/// @param eProducto listaProducto[]
 /// @param int tam
-/// @param char cadena[]
-/// @return retorna 1 si salio bien o 0 si salio mal
-int modificarProducto(eProducto unProducto[], int tam, char cadena[]);
-
-/// @fn int modificarUnDato(eProducto[], int, char[])
-/// @brief su funcion es modificar un dato de un producto
-///
-/// @param eProducto unProducto[]
-/// @param int tam
-/// @param char cadena[]
-/// @return retorna 1 si salio bien o 0 si salio mal
-int modificarUnDato(eProducto unProducto[], int tam, char cadena[]);
+void menuIdProducto(eProducto listaProducto[], int tam);
 
 /// @fn void ordenarPorPrecio(eProducto[], int)
 /// @brief su funcion es ordenar por precio los productos

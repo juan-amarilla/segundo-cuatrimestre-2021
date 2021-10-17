@@ -18,8 +18,26 @@ typedef struct
 	int contador;
 	float acumulador;
 	float promedio;
+	int idProducto;
+	int idTipo;
+	int idNacionalidad;
 
 }eAuxiliar;
+
+/// @fn int verificarEstadoId(int, int)
+/// @brief su funcion es verificar el estado y luego decidir en restar la id o no
+///
+/// @param int estado
+/// @param int id
+/// @return retorna la id
+int verificarEstadoId(int estado, int id);
+
+/// @fn eAuxiliar inicializarID(eAuxiliar)
+/// @brief su funcion es inicializar las id de auxiliar de estructura
+///
+/// @param eAuxiliar auxiliar
+/// @return retorna la estructura auxiliar
+eAuxiliar inicializarID(eAuxiliar auxiliar);
 
 /// @fn void inicializarAuxiliar(eAuxiliar[], int, eTipoProducto[])
 /// @brief su funcion es inicializar los contadores y acumuladores en 0 y trabaja con las id de tipos

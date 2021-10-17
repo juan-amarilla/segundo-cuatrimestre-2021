@@ -366,3 +366,67 @@ int mostrarPromedioDeNacionalidad(eAuxiliar auxiliar[], eNacionalidad unaNaciona
 	return retorno;
 
 }
+
+int modificarProducto(eProducto unProducto[], int tam, eTipoProducto listaTipo[], int tamTip, char cadena[])
+{
+	int retorno;
+	int seguro;
+
+	pedirEnteroValidado(cadena, "Estas seguro de modificar el producto? Ingrese el numero 1-Si o 2-No \n", &seguro);
+
+	if(seguro == 1)
+	{
+		retorno = modificarUnDato(unProducto, tam, listaTipo, tamTip, cadena);
+
+	}
+
+	else
+	{
+		printf("La modificacion no se logro \n");
+	}
+
+	return retorno;
+
+}
+
+int modificarUnDato(eProducto unProducto[], int tam, eTipoProducto listaTipo[], int tamTip, char cadena[])
+{
+	int i;
+	int retorno;
+	int idProducto;
+	int opcion;
+
+	retorno = 0;
+
+	pedirEnteroValidado(cadena, "Ingrese ID de producto para la modificacion: \n", &idProducto);
+
+	for(i=0;i<tam;i++)
+	{
+		if(unProducto[i].idProducto == idProducto && buscarEstado(unProducto[i].estado) != VACIO)
+		{
+			pedirEnteroValidado(cadena, "-1 Modificar precio -2 Modificar tipo \n", &opcion);
+
+			if(opcion == 1)
+			{
+					pedirFlotanteValidado(cadena, "Ingrese precio: \n", &unProducto[i].precio);
+					retorno = 1;
+					break;
+			}
+
+			else
+			{
+				if(opcion == 2)
+				{
+					menuTipo(listaTipo, tamTip);
+					pedirEnteroValidado(cadena, "Ingrese tipo en forma numerica: \n", &unProducto[i].tipo);
+					unProducto[i].tipo = validarTipoId(listaTipo, tamTip, unProducto[i].tipo);
+					retorno = 1;
+					break;
+				}
+			}
+		}
+	}
+
+	return retorno;
+
+}

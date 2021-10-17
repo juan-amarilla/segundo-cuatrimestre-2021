@@ -37,7 +37,7 @@ int buscarEstadoDeNacionalidad(int estado)
 	return retorno;
 }
 
-int altaNacionalidad(eNacionalidad unaNacionalidad[], int tamNac, char cadena[])
+int altaNacionalidad(eNacionalidad unaNacionalidad[], int tamNac, char cadena[], int id)
 {
 	int i;
 	int retorno;
@@ -48,7 +48,7 @@ int altaNacionalidad(eNacionalidad unaNacionalidad[], int tamNac, char cadena[])
 	{
 		if(buscarEstadoDeNacionalidad(unaNacionalidad[i].estado) != OCUPADO)
 		{
-			unaNacionalidad[i] = pedirNacionalidad(unaNacionalidad[i], cadena);
+			unaNacionalidad[i] = pedirNacionalidad(unaNacionalidad[i], cadena, id);
 			retorno = 1;
 			break;
 		}
@@ -57,9 +57,9 @@ int altaNacionalidad(eNacionalidad unaNacionalidad[], int tamNac, char cadena[])
 	return retorno;
 }
 
-eNacionalidad pedirNacionalidad(eNacionalidad unaNacionalidad, char cadena[])
+eNacionalidad pedirNacionalidad(eNacionalidad unaNacionalidad, char cadena[], int id)
 {
-	pedirEnteroValidado(cadena, "Ingrese ID de nacionalidad: \n", &unaNacionalidad.idNacionalidad);
+	unaNacionalidad.idNacionalidad = id;
 	pedirCadenaValidado(cadena, "Ingrese Descripcion: \n", unaNacionalidad.descripcionNacionalidad);
 	unaNacionalidad.estado = OCUPADO;
 

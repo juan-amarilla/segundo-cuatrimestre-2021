@@ -130,6 +130,8 @@ int main(void)
                                                            {2,"Sharp"},
 			                                               {3,"Japan Display Inc"}};
 
+    eAuxiliar auxiliarID;
+
 	int estado;
 	int opcion;
 	char cadena[CARACTERES];
@@ -142,6 +144,7 @@ int main(void)
 	setbuf(stdout, NULL);
 
 	//inicializarProductos(listaProducto, TAM);
+	auxiliarID = inicializarID(auxiliarID);
 
 	do
 	{
@@ -152,8 +155,10 @@ int main(void)
 		{
 
 		 case 1:
-		 estado = altaProducto(listaProducto, TAM, cadena);
+		 auxiliarID.idProducto++;
+		 estado = altaProducto(listaProducto, TAM, cadena, auxiliarID.idProducto);
 		 mensajeEstado(estado, "Producto ingresado con exito. \n", "Producto ingresado sin exito. \n");
+		 auxiliarID.idProducto = verificarEstadoId(estado, auxiliarID.idProducto);
 		 break;
 
 		 case 2:
@@ -162,7 +167,7 @@ int main(void)
 		 break;
 
 		 case 3:
-		 estado = modificarProducto(listaProducto, TAM, cadena);
+		 estado = modificarProducto(listaProducto, TAM, listaTipo, TAM_TIPO, cadena);
 		 mensajeEstado(estado, "Modificacion con exito. \n", "Modificacion sin exito. \n");
 		 break;
 
@@ -269,8 +274,10 @@ int main(void)
 		       switch(opcion)
 		       {
 		              case 1:
-		              estado = altaTipo(listaTipo, TAM_TIPO, cadena);
+		              auxiliarID.idTipo++;
+		              estado = altaTipo(listaTipo, TAM_TIPO, cadena, auxiliarID.idTipo);
 		              mensajeEstado(estado, "Tipo ingresado con exito. \n", "Tipo ingresado sin exito. \n");
+		              auxiliarID.idTipo = verificarEstadoId(estado, auxiliarID.idTipo);
 		              break;
 
 		              case 2:
@@ -307,8 +314,10 @@ int main(void)
 			switch(opcion)
 		    {
 			 	case 1:
-			    estado = altaNacionalidad(listaNacionalidad, TAM_NACIONALIDAD, cadena);
+			 	auxiliarID.idNacionalidad++;
+			    estado = altaNacionalidad(listaNacionalidad, TAM_NACIONALIDAD, cadena, auxiliarID.idNacionalidad);
 			 	mensajeEstado(estado, "Nacionalidad ingresado con exito. \n", "Nacionalidad ingresado sin exito. \n");
+			 	auxiliarID.idNacionalidad = verificarEstadoId(estado, auxiliarID.idNacionalidad);
 			 	break;
 
 			 	case 2:

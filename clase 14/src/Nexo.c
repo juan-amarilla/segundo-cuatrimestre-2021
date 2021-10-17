@@ -2,6 +2,29 @@
 
 #include "Nexo.h"
 
+int verificarEstadoId(int estado, int id)
+{
+	if(estado == 0)
+	{
+		id--;
+
+	}
+
+	return id;
+
+}
+
+eAuxiliar inicializarID(eAuxiliar auxiliar)
+{
+
+    auxiliar.idProducto = 0;
+    auxiliar.idTipo = 0;
+    auxiliar.idNacionalidad = 0;
+
+	return auxiliar;
+
+}
+
 void inicializarAuxiliarConTipo(eAuxiliar unAuxiliar[], int tam, eTipoProducto unTipo[])
 {
 	int i;
