@@ -1,111 +1,415 @@
-19:00:23 **** Incremental Build of configuration Debug for project clase 14 ****
+21:47:02 **** Incremental Build of configuration Debug for project clase 15-6 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
-..\src\clase 14.c:107:0: warning: "TAM" redefined
- #define TAM 2
- 
-In file included from ..\src\Nexo.h:8:0,
-                 from ..\src\NexoSegundo.h:6,
-                 from ..\src\clase 14.c:106:
-..\src\Producto.h:10:0: note: this is the location of the previous definition
- #define TAM 4
- 
-..\src\clase 14.c:108:0: warning: "TAM_TIPO" redefined
- #define TAM_TIPO 5
- 
-In file included from ..\src\Nexo.h:8:0,
-                 from ..\src\NexoSegundo.h:6,
-                 from ..\src\clase 14.c:106:
-..\src\Producto.h:11:0: note: this is the location of the previous definition
- #define TAM_TIPO 4
- 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Fabricante.o" "..\\src\\Fabricante.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoSegundo.o" "..\\src\\NexoSegundo.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nacionalidad.o" "..\\src\\Nacionalidad.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TipoProducto.o" "..\\src\\TipoProducto.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-19:00:50 **** Incremental Build of configuration Debug for project clase 14 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+..\src\clase 15-6.c:17:38: error: expected ';', ',' or ')' before 'vector'
+ int determinarIgualdadDeVector(int[] vector, int[] vectorDos);
+                                      ^~~~~~
+..\src\clase 15-6.c: In function 'main':
+..\src\clase 15-6.c:22:7: warning: unused variable 'pVectorDos' [-Wunused-variable]
+  int* pVectorDos;
+       ^~~~~~~~~~
+..\src\clase 15-6.c:21:7: warning: unused variable 'pVector' [-Wunused-variable]
+  int* pVector;
+       ^~~~~~~
+..\src\clase 15-6.c: At top level:
+..\src\clase 15-6.c:31:38: error: expected ';', ',' or ')' before 'vector'
+ int determinarIgualdadDeVector(int[] vector, int[] vectorDos)
+                                      ^~~~~~
+21:47:22 **** Incremental Build of configuration Debug for project clase 15-6 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-19:05:37 **** Incremental Build of configuration Debug for project clase 14 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+..\src\clase 15-6.c: In function 'main':
+..\src\clase 15-6.c:22:7: warning: unused variable 'pVectorDos' [-Wunused-variable]
+  int* pVectorDos;
+       ^~~~~~~~~~
+..\src\clase 15-6.c:21:7: warning: unused variable 'pVector' [-Wunused-variable]
+  int* pVector;
+       ^~~~~~~
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+21:49:02 **** Incremental Build of configuration Debug for project clase 15-6 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoSegundo.o" "..\\src\\NexoSegundo.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nacionalidad.o" "..\\src\\Nacionalidad.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TipoProducto.o" "..\\src\\TipoProducto.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Fabricante.o" "..\\src\\Fabricante.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-19:07:41 **** Incremental Build of configuration Debug for project clase 14 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+..\src\clase 15-6.c: In function 'main':
+..\src\clase 15-6.c:23:6: warning: unused variable 'pVectorDos' [-Wunused-variable]
+  int pVectorDos[TAM] = {100, 11};
+      ^~~~~~~~~~
+..\src\clase 15-6.c:22:6: warning: unused variable 'pVector' [-Wunused-variable]
+  int pVector[TAM] = {100, 11};
+      ^~~~~~~
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+21:50:44 **** Incremental Build of configuration Debug for project clase 15-6 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoSegundo.o" "..\\src\\NexoSegundo.c" 
-..\src\NexoSegundo.c:370:81: error: expected ';', ',' or ')' before '.' token
- int modificarProducto(eProducto unProducto[], int tam, eTipoProducto listaTipo[]. int tamTip, char cadena[])
-                                                                                 ^
-19:07:53 **** Incremental Build of configuration Debug for project clase 14 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+21:51:11 **** Incremental Build of configuration Debug for project clase 15-6 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoSegundo.o" "..\\src\\NexoSegundo.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-19:12:35 **** Incremental Build of configuration Debug for project clase 14 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+Info: Nothing to build for clase 15-6
+21:51:47 **** Incremental Build of configuration Debug for project clase 15-6 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Fabricante.o" "..\\src\\Fabricante.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoSegundo.o" "..\\src\\NexoSegundo.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TipoProducto.o" "..\\src\\TipoProducto.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-19:13:00 **** Incremental Build of configuration Debug for project clase 14 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+21:52:16 **** Incremental Build of configuration Debug for project clase 15-6 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoSegundo.o" "..\\src\\NexoSegundo.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-19:13:26 **** Incremental Build of configuration Debug for project clase 14 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+..\src\clase 15-6.c: In function 'main':
+..\src\clase 15-6.c:28:38: warning: passing argument 1 of 'determinarIgualdadDeVector' from incompatible pointer type [-Wincompatible-pointer-types]
+  estado = determinarIgualdadDeVector(vector, vectorDos);
+                                      ^~~~~~
+..\src\clase 15-6.c:18:5: note: expected 'int **' but argument is of type 'int *'
+ int determinarIgualdadDeVector(int* vector[], int* vectorDos[]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\clase 15-6.c:28:46: warning: passing argument 2 of 'determinarIgualdadDeVector' from incompatible pointer type [-Wincompatible-pointer-types]
+  estado = determinarIgualdadDeVector(vector, vectorDos);
+                                              ^~~~~~~~~
+..\src\clase 15-6.c:18:5: note: expected 'int **' but argument is of type 'int *'
+ int determinarIgualdadDeVector(int* vector[], int* vectorDos[]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+21:52:29 **** Incremental Build of configuration Debug for project clase 15-6 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-19:14:02 **** Incremental Build of configuration Debug for project clase 14 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+..\src\clase 15-6.c: In function 'main':
+..\src\clase 15-6.c:28:38: warning: passing argument 1 of 'determinarIgualdadDeVector' from incompatible pointer type [-Wincompatible-pointer-types]
+  estado = determinarIgualdadDeVector(&vector, &vectorDos);
+                                      ^
+..\src\clase 15-6.c:18:5: note: expected 'int **' but argument is of type 'int (*)[2]'
+ int determinarIgualdadDeVector(int* vector[], int* vectorDos[]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\clase 15-6.c:28:47: warning: passing argument 2 of 'determinarIgualdadDeVector' from incompatible pointer type [-Wincompatible-pointer-types]
+  estado = determinarIgualdadDeVector(&vector, &vectorDos);
+                                               ^
+..\src\clase 15-6.c:18:5: note: expected 'int **' but argument is of type 'int (*)[2]'
+ int determinarIgualdadDeVector(int* vector[], int* vectorDos[]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+21:52:45 **** Incremental Build of configuration Debug for project clase 15-6 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TipoProducto.o" "..\\src\\TipoProducto.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-19:29:33 **** Incremental Build of configuration Debug for project clase 14 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+..\src\clase 15-6.c: In function 'main':
+..\src\clase 15-6.c:22:22: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  int* vector[TAM] = {100, 11};
+                      ^~~
+..\src\clase 15-6.c:22:22: note: (near initialization for 'vector[0]')
+..\src\clase 15-6.c:22:27: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  int* vector[TAM] = {100, 11};
+                           ^~
+..\src\clase 15-6.c:22:27: note: (near initialization for 'vector[1]')
+..\src\clase 15-6.c:23:25: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  int* vectorDos[TAM] = {100, 11};
+                         ^~~
+..\src\clase 15-6.c:23:25: note: (near initialization for 'vectorDos[0]')
+..\src\clase 15-6.c:23:30: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  int* vectorDos[TAM] = {100, 11};
+                              ^~
+..\src\clase 15-6.c:23:30: note: (near initialization for 'vectorDos[1]')
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+21:53:11 **** Incremental Build of configuration Debug for project clase 15-6 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Fabricante.o" "..\\src\\Fabricante.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoSegundo.o" "..\\src\\NexoSegundo.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TipoProducto.o" "..\\src\\TipoProducto.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-Info: Nothing to build for clase 14
-Info: Nothing to build for clase 14
-19:38:50 **** Incremental Build of configuration Debug for project clase 14 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+..\src\clase 15-6.c: In function 'main':
+..\src\clase 15-6.c:22:22: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  int* vector[TAM] = {100, 11};
+                      ^~~
+..\src\clase 15-6.c:22:22: note: (near initialization for 'vector[0]')
+..\src\clase 15-6.c:22:27: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  int* vector[TAM] = {100, 11};
+                           ^~
+..\src\clase 15-6.c:22:27: note: (near initialization for 'vector[1]')
+..\src\clase 15-6.c:23:25: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  int* vectorDos[TAM] = {100, 11};
+                         ^~~
+..\src\clase 15-6.c:23:25: note: (near initialization for 'vectorDos[0]')
+..\src\clase 15-6.c:23:30: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  int* vectorDos[TAM] = {100, 11};
+                              ^~
+..\src\clase 15-6.c:23:30: note: (near initialization for 'vectorDos[1]')
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+21:53:16 **** Incremental Build of configuration Debug for project clase 15-6 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TipoProducto.o" "..\\src\\TipoProducto.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-19:40:27 **** Incremental Build of configuration Debug for project clase 14 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+..\src\clase 15-6.c: In function 'main':
+..\src\clase 15-6.c:22:22: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  int* vector[TAM] = {100, 11};
+                      ^~~
+..\src\clase 15-6.c:22:22: note: (near initialization for 'vector[0]')
+..\src\clase 15-6.c:22:27: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  int* vector[TAM] = {100, 11};
+                           ^~
+..\src\clase 15-6.c:22:27: note: (near initialization for 'vector[1]')
+..\src\clase 15-6.c:23:25: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  int* vectorDos[TAM] = {100, 11};
+                         ^~~
+..\src\clase 15-6.c:23:25: note: (near initialization for 'vectorDos[0]')
+..\src\clase 15-6.c:23:30: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  int* vectorDos[TAM] = {100, 11};
+                              ^~
+..\src\clase 15-6.c:23:30: note: (near initialization for 'vectorDos[1]')
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+21:57:08 **** Incremental Build of configuration Debug for project clase 15-6 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TipoProducto.o" "..\\src\\TipoProducto.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-19:40:41 **** Incremental Build of configuration Debug for project clase 14 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+..\src\clase 15-6.c: In function 'main':
+..\src\clase 15-6.c:25:7: warning: unused variable 'pVectorDos' [-Wunused-variable]
+  int* pVectorDos;
+       ^~~~~~~~~~
+..\src\clase 15-6.c:24:7: warning: unused variable 'pVector' [-Wunused-variable]
+  int* pVector;
+       ^~~~~~~
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+21:57:24 **** Incremental Build of configuration Debug for project clase 15-6 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TipoProducto.o" "..\\src\\TipoProducto.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-Info: Nothing to build for clase 14
-19:50:02 **** Incremental Build of configuration Debug for project clase 14 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+..\src\clase 15-6.c: In function 'main':
+..\src\clase 15-6.c:23:6: warning: unused variable 'vectorDos' [-Wunused-variable]
+  int vectorDos[TAM] = {100, 11};
+      ^~~~~~~~~
+..\src\clase 15-6.c:22:6: warning: unused variable 'vector' [-Wunused-variable]
+  int vector[TAM] = {100, 11};
+      ^~~~~~
+..\src\clase 15-6.c:30:9: warning: 'pVector' is used uninitialized in this function [-Wuninitialized]
+  estado = determinarIgualdadDeVector(pVector, pVectorDos);
+  ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\clase 15-6.c:30:9: warning: 'pVectorDos' is used uninitialized in this function [-Wuninitialized]
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+21:58:11 **** Incremental Build of configuration Debug for project clase 15-6 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nacionalidad.o" "..\\src\\Nacionalidad.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 14.o" "..\\src\\clase 14.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TipoProducto.o" "..\\src\\TipoProducto.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\NexoSegundo.o" "..\\src\\NexoSegundo.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Fabricante.o" "..\\src\\Fabricante.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Nexo.o" "..\\src\\Nexo.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
-Info: Nothing to build for clase 14
-19:52:09 **** Incremental Build of configuration Debug for project clase 14 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+Info: Nothing to build for clase 15-6
+22:01:37 **** Incremental Build of configuration Debug for project clase 15-6 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TipoProducto.o" "..\\src\\TipoProducto.c" 
-gcc -o "clase 14.exe" "src\\Fabricante.o" "src\\IngresarDatos.o" "src\\Nacionalidad.o" "src\\Nexo.o" "src\\NexoSegundo.o" "src\\OtrasFunciones.o" "src\\Producto.o" "src\\TipoProducto.o" "src\\clase 14.o" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+Info: Nothing to build for clase 15-6
+22:01:48 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+22:02:00 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+22:04:59 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+..\src\clase 15-6.c: In function 'determinarIgualdadDeVector':
+..\src\clase 15-6.c:52:7: warning: variable 'pNumeroDos' set but not used [-Wunused-but-set-variable]
+  int* pNumeroDos;
+       ^~~~~~~~~~
+..\src\clase 15-6.c:51:7: warning: variable 'pNumero' set but not used [-Wunused-but-set-variable]
+  int* pNumero;
+       ^~~~~~~
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+22:05:35 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+22:06:01 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+..\src\clase 15-6.c: In function 'main':
+..\src\clase 15-6.c:30:2: error: 'pVector' undeclared (first use in this function)
+  pVector = vector;
+  ^~~~~~~
+..\src\clase 15-6.c:30:2: note: each undeclared identifier is reported only once for each function it appears in
+..\src\clase 15-6.c:31:2: error: 'pVectorDos' undeclared (first use in this function)
+  pVectorDos = vectorDos;
+  ^~~~~~~~~~
+22:06:07 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+Info: Nothing to build for clase 15-6
+22:06:32 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+..\src\clase 15-6.c: In function 'determinarIgualdadDeVector':
+..\src\clase 15-6.c:56:10: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+  pNumero = &vector;
+          ^
+..\src\clase 15-6.c:57:13: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+  pNumeroDos = &vectorDos;
+             ^
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+22:06:42 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+..\src\clase 15-6.c: In function 'determinarIgualdadDeVector':
+..\src\clase 15-6.c:56:11: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  *pNumero = &vector;
+           ^
+..\src\clase 15-6.c:57:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  *pNumeroDos = &vectorDos;
+              ^
+..\src\clase 15-6.c:56:11: warning: 'pNumero' is used uninitialized in this function [-Wuninitialized]
+  *pNumero = &vector;
+  ~~~~~~~~~^~~~~~~~~
+..\src\clase 15-6.c:57:14: warning: 'pNumeroDos' is used uninitialized in this function [-Wuninitialized]
+  *pNumeroDos = &vectorDos;
+  ~~~~~~~~~~~~^~~~~~~~~~~~
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+22:06:56 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+22:07:09 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+..\src\clase 15-6.c: In function 'main':
+..\src\clase 15-6.c:33:38: warning: passing argument 1 of 'determinarIgualdadDeVector' from incompatible pointer type [-Wincompatible-pointer-types]
+  estado = determinarIgualdadDeVector(vector, vectorDos);
+                                      ^~~~~~
+..\src\clase 15-6.c:18:5: note: expected 'int **' but argument is of type 'int *'
+ int determinarIgualdadDeVector(int* vector[], int* vectorDos[]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\clase 15-6.c:33:46: warning: passing argument 2 of 'determinarIgualdadDeVector' from incompatible pointer type [-Wincompatible-pointer-types]
+  estado = determinarIgualdadDeVector(vector, vectorDos);
+                                              ^~~~~~~~~
+..\src\clase 15-6.c:18:5: note: expected 'int **' but argument is of type 'int *'
+ int determinarIgualdadDeVector(int* vector[], int* vectorDos[]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\clase 15-6.c: At top level:
+..\src\clase 15-6.c:48:5: error: conflicting types for 'determinarIgualdadDeVector'
+ int determinarIgualdadDeVector(int vector[], int vectorDos[])
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\clase 15-6.c:18:5: note: previous declaration of 'determinarIgualdadDeVector' was here
+ int determinarIgualdadDeVector(int* vector[], int* vectorDos[]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+22:07:17 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+..\src\clase 15-6.c: In function 'main':
+..\src\clase 15-6.c:33:38: warning: passing argument 1 of 'determinarIgualdadDeVector' from incompatible pointer type [-Wincompatible-pointer-types]
+  estado = determinarIgualdadDeVector(&vector, &vectorDos);
+                                      ^
+..\src\clase 15-6.c:18:5: note: expected 'int **' but argument is of type 'int (*)[2]'
+ int determinarIgualdadDeVector(int* vector[], int* vectorDos[]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\clase 15-6.c:33:47: warning: passing argument 2 of 'determinarIgualdadDeVector' from incompatible pointer type [-Wincompatible-pointer-types]
+  estado = determinarIgualdadDeVector(&vector, &vectorDos);
+                                               ^
+..\src\clase 15-6.c:18:5: note: expected 'int **' but argument is of type 'int (*)[2]'
+ int determinarIgualdadDeVector(int* vector[], int* vectorDos[]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\clase 15-6.c: At top level:
+..\src\clase 15-6.c:48:5: error: conflicting types for 'determinarIgualdadDeVector'
+ int determinarIgualdadDeVector(int vector[], int vectorDos[])
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\clase 15-6.c:18:5: note: previous declaration of 'determinarIgualdadDeVector' was here
+ int determinarIgualdadDeVector(int* vector[], int* vectorDos[]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+22:07:28 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+..\src\clase 15-6.c: In function 'main':
+..\src\clase 15-6.c:33:38: warning: passing argument 1 of 'determinarIgualdadDeVector' from incompatible pointer type [-Wincompatible-pointer-types]
+  estado = determinarIgualdadDeVector(&vector, &vectorDos);
+                                      ^
+..\src\clase 15-6.c:18:5: note: expected 'int **' but argument is of type 'int (*)[2]'
+ int determinarIgualdadDeVector(int* vector[], int* vectorDos[]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\clase 15-6.c:33:47: warning: passing argument 2 of 'determinarIgualdadDeVector' from incompatible pointer type [-Wincompatible-pointer-types]
+  estado = determinarIgualdadDeVector(&vector, &vectorDos);
+                                               ^
+..\src\clase 15-6.c:18:5: note: expected 'int **' but argument is of type 'int (*)[2]'
+ int determinarIgualdadDeVector(int* vector[], int* vectorDos[]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\clase 15-6.c: In function 'determinarIgualdadDeVector':
+..\src\clase 15-6.c:56:10: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+  pNumero = vector;
+          ^
+..\src\clase 15-6.c:57:13: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+  pNumeroDos = vectorDos;
+             ^
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+22:07:39 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+..\src\clase 15-6.c: In function 'main':
+..\src\clase 15-6.c:33:38: warning: passing argument 1 of 'determinarIgualdadDeVector' from incompatible pointer type [-Wincompatible-pointer-types]
+  estado = determinarIgualdadDeVector(vector, vectorDos);
+                                      ^~~~~~
+..\src\clase 15-6.c:18:5: note: expected 'int **' but argument is of type 'int *'
+ int determinarIgualdadDeVector(int* vector[], int* vectorDos[]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\clase 15-6.c:33:46: warning: passing argument 2 of 'determinarIgualdadDeVector' from incompatible pointer type [-Wincompatible-pointer-types]
+  estado = determinarIgualdadDeVector(vector, vectorDos);
+                                              ^~~~~~~~~
+..\src\clase 15-6.c:18:5: note: expected 'int **' but argument is of type 'int *'
+ int determinarIgualdadDeVector(int* vector[], int* vectorDos[]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\clase 15-6.c: In function 'determinarIgualdadDeVector':
+..\src\clase 15-6.c:56:10: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+  pNumero = vector;
+          ^
+..\src\clase 15-6.c:57:13: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+  pNumeroDos = vectorDos;
+             ^
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+22:07:46 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+..\src\clase 15-6.c: In function 'main':
+..\src\clase 15-6.c:22:22: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  int* vector[TAM] = {100, 11};
+                      ^~~
+..\src\clase 15-6.c:22:22: note: (near initialization for 'vector[0]')
+..\src\clase 15-6.c:22:27: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  int* vector[TAM] = {100, 11};
+                           ^~
+..\src\clase 15-6.c:22:27: note: (near initialization for 'vector[1]')
+..\src\clase 15-6.c:23:25: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  int* vectorDos[TAM] = {100, 11};
+                         ^~~
+..\src\clase 15-6.c:23:25: note: (near initialization for 'vectorDos[0]')
+..\src\clase 15-6.c:23:30: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  int* vectorDos[TAM] = {100, 11};
+                              ^~
+..\src\clase 15-6.c:23:30: note: (near initialization for 'vectorDos[1]')
+..\src\clase 15-6.c: In function 'determinarIgualdadDeVector':
+..\src\clase 15-6.c:56:10: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+  pNumero = vector;
+          ^
+..\src\clase 15-6.c:57:13: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+  pNumeroDos = vectorDos;
+             ^
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+22:09:20 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+Info: Nothing to build for clase 15-6
+22:09:50 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+Info: Nothing to build for clase 15-6
+22:10:02 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+Info: Nothing to build for clase 15-6
+22:10:12 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+22:10:24 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+22:10:54 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+Info: Nothing to build for clase 15-6
+22:11:03 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+22:11:46 **** Incremental Build of configuration Debug for project clase 15-6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase 15-6.o" "..\\src\\clase 15-6.c" 
+gcc -o "clase 15-6.exe" "src\\clase 15-6.o" 
+Info: Nothing to build for clase 15-6
