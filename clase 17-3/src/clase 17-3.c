@@ -26,83 +26,96 @@ posicion->0	 1	2	3	4
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
-#define TAM 4
 
-int* agregar(int array[], int tam, int entero, int indice);
+int agregar(int* pArray, int* tam, int entero, int indice);
 
 int main(void)
 {
 
 	int entero;
 	int indice;
-	int array[TAM] = {1, 5, 4, 9};
+	int array[4] = {1, 5, 4, 9};
 	int i;
 	int* pArray;
+	int tam;
+	int retorno;
 
 	entero = 10;
 	indice = 2;
+	tam = 4;
 
 	setbuf(stdout,NULL);
 
-	for(i=0;i<TAM;i++)
+	pArray = (int*) malloc(sizeof(int)*tam);
+	pArray = array;
+
+	for(i=0;i<tam;i++)
 	{
-		printf("numero: %d \n", array[i]);
+		printf("numero: %d \n", *(pArray+i));
 
 	}
 
-	pArray = agregar(array, TAM, entero, indice);
+	retorno = agregar(pArray, &tam, entero, indice);
 
-	printf("estructurado de nuevo: \n");
-
-	if(pArray != NULL)
+	if(pArray != NULL && retorno == 1)
 	{
-		for(i=0;i<TAM+1;i++)
+	    printf("estructurado de nuevo: \n");
+
+		for(i=0;i<tam;i++)
 		{
 	        printf("numero estructurado: %d \n", *(pArray+i));
 		}
 
 	}
+
+	return 0;
 }
 
-int* agregar(int array[], int tam, int entero, int indice)
+int agregar(int* pArray, int* tam, int entero, int indice)
 {
 	int i;
-	int* pArray;
+	int retorno;
+	int aux;
 
-	if(tam > 1)
+	retorno = -1;
+
+	//1 >1 5 4 9
+	//2 >1 5 10 4 ?
+	// resultado > 1 5 10 4 9
+
+	if(pArray != NULL && tam != NULL)
 	{
-		pArray = (int*) malloc(sizeof(int)*(tam+1));
-	}
-
-
-	if(pArray != NULL)
-	{
-		for(i = 0; i<tam+1; i++)
+		for(i = 0; i<*tam; i++)
 		{
-			if(i < indice)
+			if(i == indice)
 			{
-				*(pArray+i) = array[i];
-
+				 aux = *(pArray+i);
+				*(pArray+i) = entero;
+				*tam = *tam + 1;
+				retorno = 1;
 			}
 
 			else
 			{
 				if(i > indice)
 				{
-					*(pArray+i) = array[i-1];
-				}
-
-				else
-				{
-					*(pArray+i) = 10;
+					*(pArray+i) = aux;
 				}
 
 			}
 
 		}
 
+		pArray = (int*) realloc(pArray, sizeof(int)*(*(tam)+1));
+
 	}
 
-	return pArray;
+	else
+	{
+		free(pArray);
+		free(tam);
+	}
+
+	return retorno;
 
 }

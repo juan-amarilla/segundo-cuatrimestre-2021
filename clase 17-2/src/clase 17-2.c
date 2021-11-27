@@ -24,34 +24,39 @@ posicion->0	 1	 2	 3
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
-#define TAM 5
 
-int* remover(int array[], int tam, int entero);
+int remover(int* pArray, int* tam, int entero);
 
 int main(void)
 {
 	int entero;
-	int array[TAM] = {5, 4, 2, 1, 3};
 	int i;
 	int* pArray;
+	int retorno;
+	int tam;
+
+	tam = 5;
 
 	entero = 2;
 
 	setbuf(stdout,NULL);
 
-	for(i=0;i<TAM;i++)
+	pArray = (int*) malloc(sizeof(int)*tam);
+
+	for(i=0;i<tam;i++)
 	{
-		printf("numero: %d \n", array[i]);
+	    *(pArray+i) = i + 1;
+		printf("numero: %d \n", *(pArray+i));
 
 	}
 
-	pArray = remover(array, TAM, entero);
+	retorno = remover(pArray, &tam, entero);
 
 	printf("estructurado de nuevo: \n");
 
-	if(pArray != NULL)
+	if(pArray != NULL && retorno == 1)
 	{
-		for(i=0;i<TAM-1;i++)
+		for(i=0;i<tam;i++)
 		{
             printf("numero estructurado: %d \n", *(pArray+i));
 		}
@@ -61,42 +66,37 @@ int main(void)
 	return 0;
 }
 
-int* remover(int array[], int tam, int entero)
+int remover(int* pArray, int* tam, int entero)
 {
 	int i;
-	int* pArray;
+	int j;
+	int retorno;
 
-	pArray = NULL;
+	retorno = -1;
 
-	if(tam > 1)
+	if(pArray != NULL)
 	{
-		pArray = (int*) malloc(sizeof(int)*(tam-1));
-	}
-
-	else
-	{
-		return pArray;
-	}
-
-	if(pArray == NULL)
-	{
-		return pArray;
-	}
-
-	for(i = 0;i<tam-1; i++)
-	{
-		if(i < entero)
+		for(i = 0;i<*tam; i++)
 		{
-          *(pArray+i) = array[i];
-		}
+			if(*(pArray+i) == entero)
+			{
+				for(j = i;j<*tam; j++)
+				{
+					*(pArray+j) = *(pArray+j+1);
 
-		else
-		{
-			*(pArray+i) = array[i+1];
+				}
+
+				retorno = 1;
+				pArray = (int*) realloc(pArray, sizeof(int)*(*tam-1));
+				*tam = *tam - 1;
+				break;
+
+			}
+
 		}
 
 	}
 
-	return pArray;
+	return retorno;
 
 }
